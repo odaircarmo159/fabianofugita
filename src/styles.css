@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizFRFtCsbMzVpdLE8DRcw.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizMRFtCsbMzVpdLE8DRcw9d6Mak.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/intertight/v7/NGS6v5_NC0k9P9ldb16UbnFvbcr4.woff2") format("woff2");
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --font-serif: "Instrument Serif", "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Raw OKLCH channels so Tailwind v3 can compose opacity variants like text-forest/80 */
+  --sage: 0.72 0.035 175;
+  --sage-soft: 0.83 0.025 175;
+  --forest: 0.34 0.025 180;
+  --ink: 0.18 0.012 180;
+  --bone: 0.965 0.005 100;
+
+  --background: var(--bone);
+  --foreground: var(--ink);
+  --card: 1 0 0;
+  --card-foreground: var(--ink);
+  --popover: 1 0 0;
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--bone);
+  --secondary: 0.93 0.01 175;
+  --secondary-foreground: var(--ink);
+  --muted: 0.94 0.008 175;
+  --muted-foreground: 0.42 0.012 180;
+  --accent: var(--forest);
+  --accent-foreground: var(--bone);
+  --destructive: 0.55 0.18 25;
+  --destructive-foreground: 0.99 0 0;
+  --border: 0.88 0.008 175;
+  --input: 0.88 0.008 175;
+  --ring: var(--forest);
+}
+
+.dark {
+  --background: var(--ink);
+  --foreground: var(--bone);
+  --card: 0.24 0.012 180;
+  --card-foreground: var(--bone);
+  --popover: 0.24 0.012 180;
+  --popover-foreground: var(--bone);
+  --primary: var(--bone);
+  --primary-foreground: var(--ink);
+  --secondary: 0.28 0.012 180;
+  --secondary-foreground: var(--bone);
+  --muted: 0.28 0.012 180;
+  --muted-foreground: 0.7 0.012 180;
+  --accent: var(--sage);
+  --accent-foreground: var(--ink);
+  --border: 1 0 0;
+  --input: 1 0 0;
+  --ring: var(--sage);
+}
+
+@layer base {
+  * {
+    border-color: oklch(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+  }
+
+  ::selection {
+    background-color: oklch(var(--forest));
+    color: oklch(var(--bone));
+  }
+}
+
+@layer utilities {
+  .font-serif { font-family: var(--font-serif); }
+  .font-sans { font-family: var(--font-sans); }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .hairline { border-color: oklch(var(--ink) / 0.14); }
+  .hairline-light { border-color: oklch(var(--bone) / 0.25); }
+
+  .grain {
+    background-image:
+      radial-gradient(oklch(var(--ink) / 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 1s cubic-bezier(0.2, 0.7, 0.1, 1), transform 1s cubic-bezier(0.2, 0.7, 0.1, 1);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 48s linear infinite; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  .animate-blink { animation: blink 2.4s ease-in-out infinite; }
+}
