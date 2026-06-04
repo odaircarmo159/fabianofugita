@@ -23,33 +23,37 @@ const differentiators = [
 
 export function Diferenciais() {
   return (
-    <section className="border-t border-border">
-      <div className="mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-24 lg:px-12">
-        <div className="grid grid-cols-12 gap-8">
+    <section className="border-t border-[#8d4642] bg-[linear-gradient(180deg,#7a2c2d_0%,#642224_100%)] text-bone">
+      <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-6 sm:py-24 lg:px-12">
+        <div className="grid grid-cols-12 gap-10 lg:gap-14">
           <div className="reveal col-span-12 md:col-span-4">
-            <p className="eyebrow text-forest">Por que escolher</p>
-            <h2 className="mt-5 font-serif text-[32px] leading-[1.02] sm:mt-6 sm:text-[40px] md:text-[56px]">
-              Um atendimento mais <em className="italic text-forest">próximo e claro</em>.
+            <p className="eyebrow text-[#d9b897]">Por que escolher</p>
+            <h2 className="mt-5 font-serif text-[34px] leading-[1.02] sm:mt-6 sm:text-[42px] md:text-[60px]">
+              Um atendimento mais <em className="italic text-[#e0bb8d]">próximo e claro</em>.
             </h2>
-            <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-foreground/75 sm:mt-6 sm:text-[16px]">
+            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-bone/78 sm:mt-6 sm:text-[17px]">
               Mais do que listar áreas de atuação, o importante aqui é mostrar como a consulta
               acontece na prática e o que o paciente pode esperar do atendimento.
             </p>
           </div>
 
-          <div className="col-span-12 grid grid-cols-1 gap-px bg-border md:col-span-8 md:grid-cols-2">
+          <div className="col-span-12 md:col-span-8">
             {differentiators.map((item, index) => (
               <article
                 key={item.title}
-                className="reveal group bg-background p-6 transition-transform duration-500 hover:-translate-y-1 sm:p-8"
+                className="reveal flex gap-5 border-b border-white/12 py-6 last:border-b-0 sm:gap-6 sm:py-7"
               >
-                <p className="eyebrow text-forest/70">0{index + 1}</p>
-                <h3 className="mt-6 font-serif text-[23px] leading-tight text-foreground sm:mt-8 sm:text-[28px]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-[14px] leading-relaxed text-foreground/78 sm:text-[15px]">
-                  {item.description}
+                <p className="w-10 shrink-0 pt-1 font-serif text-[22px] italic leading-none text-[#d9b897]/78">
+                  0{index + 1}
                 </p>
+                <div className="max-w-[760px]">
+                  <h3 className="max-w-[18ch] font-serif text-[24px] leading-[1.02] text-bone sm:text-[28px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-bone/78 sm:text-[16px]">
+                    {item.description}
+                  </p>
+                </div>
               </article>
             ))}
           </div>

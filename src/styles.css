@@ -31,11 +31,11 @@
   --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Raw OKLCH channels so Tailwind v3 can compose opacity variants like text-forest/80 */
-  --sage: 0.72 0.035 175;
-  --sage-soft: 0.83 0.025 175;
-  --forest: 0.34 0.025 180;
-  --ink: 0.18 0.012 180;
-  --bone: 0.965 0.005 100;
+  --sage: 0.76 0.055 42;
+  --sage-soft: 0.93 0.02 45;
+  --forest: 0.34 0.09 24;
+  --ink: 0.22 0.045 18;
+  --bone: 0.975 0.008 60;
 
   --background: var(--bone);
   --foreground: var(--ink);
@@ -45,16 +45,16 @@
   --popover-foreground: var(--ink);
   --primary: var(--ink);
   --primary-foreground: var(--bone);
-  --secondary: 0.93 0.01 175;
+  --secondary: 0.93 0.012 40;
   --secondary-foreground: var(--ink);
-  --muted: 0.94 0.008 175;
-  --muted-foreground: 0.42 0.012 180;
+  --muted: 0.95 0.008 45;
+  --muted-foreground: 0.46 0.02 24;
   --accent: var(--forest);
   --accent-foreground: var(--bone);
   --destructive: 0.55 0.18 25;
   --destructive-foreground: 0.99 0 0;
-  --border: 0.88 0.008 175;
-  --input: 0.88 0.008 175;
+  --border: 0.89 0.01 40;
+  --input: 0.89 0.01 40;
   --ring: var(--forest);
 }
 
@@ -121,7 +121,7 @@
 
   .grain {
     background-image:
-      radial-gradient(oklch(var(--ink) / 0.05) 1px, transparent 1px);
+      radial-gradient(oklch(var(--ink) / 0.045) 1px, transparent 1px);
     background-size: 3px 3px;
   }
 
@@ -137,8 +137,41 @@
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 1s cubic-bezier(0.2, 0.7, 0.1, 1), transform 1s cubic-bezier(0.2, 0.7, 0.1, 1);
+    will-change: opacity, transform;
   }
-  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal[data-reveal="left"] { transform: translate3d(-28px, 18px, 0); }
+  .reveal[data-reveal="right"] { transform: translate3d(28px, 18px, 0); }
+  .reveal[data-reveal="zoom"] { transform: translate3d(0, 22px, 0) scale(0.96); }
+  .reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+
+  .scrollbar-elegant {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-elegant::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .scrollbar-elegant {
+      scrollbar-width: thin;
+      scrollbar-color: oklch(var(--forest) / 0.16) transparent;
+    }
+    .scrollbar-elegant::-webkit-scrollbar {
+      display: block;
+      height: 6px;
+    }
+    .scrollbar-elegant::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scrollbar-elegant::-webkit-scrollbar-thumb {
+      background: oklch(var(--forest) / 0.14);
+      border-radius: 999px;
+    }
+    .scrollbar-elegant::-webkit-scrollbar-thumb:hover {
+      background: oklch(var(--forest) / 0.22);
+    }
+  }
 
   @keyframes marquee {
     0% { transform: translateX(0); }

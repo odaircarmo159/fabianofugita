@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import doctorLogo from "@/assets/logo.png";
 import { cfmSearchUrl, instagramProfileUrl, lattesProfileUrl } from "@/content/links";
 
 type ModalType = "privacy" | "terms" | null;
@@ -27,7 +28,14 @@ export function Footer() {
       <footer className="bg-ink text-bone">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 border-t hairline-light px-6 pb-28 pt-10 sm:pb-10 lg:px-12">
           <div className="col-span-12 md:col-span-6">
-            <p className="font-serif text-xl">Dr. Fabiano Roberto Fugita</p>
+            <div className="flex items-center gap-4">
+              <img
+                src={doctorLogo}
+                alt="Logo Dr. Fabiano Roberto Fugita"
+                className="h-12 w-auto object-contain opacity-95"
+              />
+              <p className="font-serif text-xl">Dr. Fabiano Roberto Fugita</p>
+            </div>
             <p className="mt-1 text-[12px] text-bone/55">
               CRM 9145 RQE 8667 · Urologia &amp; Uro-Oncologia · © {new Date().getFullYear()}
             </p>

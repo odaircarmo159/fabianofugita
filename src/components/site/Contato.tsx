@@ -1,3 +1,4 @@
+import doctorLogo from "@/assets/logo.png";
 import { googleMapsConsultorioUrl, whatsappAppointmentUrl } from "@/content/links";
 
 export function Contato() {
@@ -24,6 +25,11 @@ export function Contato() {
       <div className="mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
         <div className="grid grid-cols-12 gap-8 border-b hairline-light pb-12 sm:pb-16">
           <div className="col-span-12 md:col-span-7">
+            <img
+              src={doctorLogo}
+              alt="Logo Dr. Fabiano Roberto Fugita"
+              className="mb-5 h-12 w-auto object-contain opacity-90 sm:h-14"
+            />
             <p className="eyebrow text-bone/60">04 / Contato</p>
             <h2 className="reveal mt-5 font-serif text-[34px] leading-[1.02] text-balance sm:mt-6 sm:text-[48px] md:text-[80px] lg:text-[96px]">
               Agende sua consulta
