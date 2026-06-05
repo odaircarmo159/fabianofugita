@@ -27,9 +27,9 @@ export function Atuacao() {
     >
       <div className="mx-auto max-w-[1680px] px-4 py-20 sm:px-6 sm:py-24 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[860px] text-center">
-          <p className="eyebrow text-[#8f6a58]">02 / Especialidades</p>
+          <p className="eyebrow text-[#8f6a58]">02 / Áreas de Atuação</p>
           <h2 className="reveal mt-5 font-serif text-[44px] italic leading-[0.95] text-forest sm:text-[56px] md:text-[78px] lg:text-[92px]">
-            Especialidades
+            Áreas de Atuação
           </h2>
           <p className="reveal mx-auto mt-6 max-w-[820px] text-[18px] leading-relaxed text-foreground/78 sm:text-[20px]">
             Tratamento urológico com diagnóstico preciso, condução técnica e

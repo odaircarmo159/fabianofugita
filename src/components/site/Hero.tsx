@@ -4,16 +4,16 @@ import { whatsappAppointmentUrl } from "@/content/links";
 
 export function Hero() {
   return (
-    <section id="top" className="relative bg-forest pt-[84px] md:pt-[96px]">
+    <section id="top" className="relative bg-forest">
       <div className="mx-auto max-w-[1920px] px-0 pb-0">
         <div className="relative overflow-hidden bg-forest text-bone">
-          <div className="absolute inset-0">
+          <div className="absolute inset-x-0 bottom-0 top-[68px] sm:top-[84px]">
             <img
               src={doctorHeroLandscape}
               alt="Dr. Fabiano Roberto Fugita"
               width={1536}
               height={1024}
-              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[76%_center] md:object-right"
+              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[72%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.72)_58%,oklch(var(--forest)/0.34)_72%,transparent_88%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_24%,oklch(var(--sage)/0.08),transparent_22%),linear-gradient(180deg,oklch(var(--ink)/0.12)_0%,transparent_34%,oklch(var(--ink)/0.14)_100%)]" />
@@ -22,7 +22,7 @@ export function Hero() {
           <div className="pointer-events-none absolute inset-0 grain opacity-[0.08]" />
           <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_top_left,oklch(var(--sage)/0.08),transparent_28%)] md:w-[55%]" />
 
-          <div className="relative z-10 grid min-h-[540px] grid-cols-12 md:min-h-[620px] lg:min-h-[680px]">
+          <div className="relative z-10 grid min-h-[540px] grid-cols-12 pt-[68px] sm:pt-[84px] md:min-h-[620px] lg:min-h-[680px]">
             <div className="col-span-12 px-6 py-10 sm:px-8 sm:py-14 md:col-span-8 md:px-12 md:py-16 lg:px-16 lg:py-20">
               <p className="eyebrow text-bone/68">
                 <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-[#d7b183] align-middle animate-blink" />
@@ -30,10 +30,10 @@ export function Hero() {
               </p>
 
               <h1 className="mt-8 max-w-[13ch] font-serif text-[36px] leading-[0.96] tracking-tight text-bone sm:text-[44px] md:mt-9 md:text-[56px] lg:max-w-[14ch] lg:text-[72px]">
-                Cuidado urológico com precisão e presença em cada etapa
+                Urologia com precisão e presença.
               </h1>
               <h2 className="mt-4 max-w-[20ch] font-serif text-[21px] italic leading-[1.08] text-[#d7b183] sm:text-[25px] md:mt-5 md:text-[30px] lg:max-w-[22ch] lg:text-[38px]">
-                Urologia, uro-oncologia e cirurgia minimamente invasiva com condução clara e individualizada
+                Uro-oncologia e cirurgia minimamente invasiva com condução clara.
               </h2>
 
               <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
@@ -57,7 +57,7 @@ export function Hero() {
 
               <div className="mt-10 max-w-[620px] pl-5 sm:pl-6">
                 <p className="font-serif text-[19px] italic leading-tight text-bone sm:text-[21px] md:text-[24px]">
-                  Decisões seguras, linguagem clara e acompanhamento próximo do diagnóstico ao seguimento.
+                  Decisões seguras e acompanhamento próximo do diagnóstico ao seguimento.
                 </p>
                 <p className="mt-4 text-[12px] uppercase tracking-[0.16em] text-bone/68 sm:text-[13px]">
                   Atendimento em Dourados-MS

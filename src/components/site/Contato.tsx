@@ -7,16 +7,19 @@ export function Contato() {
       label: "WhatsApp",
       value: "+55 (67) 99869-5613",
       href: whatsappAppointmentUrl,
+      cta: "Agendar consulta",
     },
     {
       label: "E-mail",
       value: "contato@drfabianofugita.com.br",
       href: "mailto:contato@drfabianofugita.com.br",
+      cta: "Falar com a equipe",
     },
     {
       label: "Google Maps",
       value: "Ver localização do consultório",
       href: googleMapsConsultorioUrl,
+      cta: "Onde nos encontrar",
     },
   ];
 
@@ -89,7 +92,7 @@ export function Contato() {
                 {c.value}
               </p>
               <span className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-sage sm:mt-8 sm:text-[12px] sm:tracking-[0.2em]">
-                Falar com a equipe
+                {c.cta}
                 <svg className="h-3 w-3 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
               </span>
             </a>

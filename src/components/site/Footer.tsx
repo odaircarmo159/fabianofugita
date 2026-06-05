@@ -26,8 +26,9 @@ export function Footer() {
   return (
     <>
       <footer className="bg-ink text-bone">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 border-t hairline-light px-6 pb-28 pt-10 sm:pb-10 lg:px-12">
-          <div className="col-span-12 md:col-span-6">
+        <div className="mx-auto max-w-[1400px] border-t hairline-light px-6 pb-28 pt-10 sm:pb-10 lg:px-12">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-6">
             <div className="flex items-center gap-4">
               <img
                 src={doctorLogo}
@@ -88,28 +89,34 @@ export function Footer() {
                 Currículo Lattes
               </a>
             </div>
-          </div>
-          <div className="col-span-12 max-w-md text-[12px] text-bone/55 md:col-span-6 md:ml-auto md:text-right">
-            <p>
-              Este site tem finalidade informativa. A avaliação médica individual é essencial para
-              diagnóstico e definição do tratamento mais adequado.
-            </p>
-            <div className="mt-5 flex flex-wrap justify-start gap-4 md:justify-end">
-              <button
-                type="button"
-                onClick={() => setActiveModal("privacy")}
-                className="transition-colors hover:text-bone"
-              >
-                Política de Privacidade
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveModal("terms")}
-                className="transition-colors hover:text-bone"
-              >
-                Termos de Uso
-              </button>
             </div>
+            <div className="col-span-12 max-w-md text-[12px] text-bone/55 md:col-span-6 md:ml-auto md:text-right">
+              <p>
+                Este site tem finalidade informativa. A avaliação médica individual é essencial para
+                diagnóstico e definição do tratamento mais adequado.
+              </p>
+              <div className="mt-5 flex flex-wrap justify-start gap-4 md:justify-end">
+                <button
+                  type="button"
+                  onClick={() => setActiveModal("privacy")}
+                  className="transition-colors hover:text-bone"
+                >
+                  Política de Privacidade
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveModal("terms")}
+                  className="transition-colors hover:text-bone"
+                >
+                  Termos de Uso
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-white/8 pt-5 text-[11px] text-bone/35">
+            <p>© {new Date().getFullYear()} Dr. Fabiano Roberto Fugita. Todos os direitos reservados.</p>
+            <p className="mt-1">Desenvolvido por YouSystem.</p>
           </div>
         </div>
       </footer>

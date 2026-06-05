@@ -15,7 +15,7 @@ export default function App() {
   useReveal();
 
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-background text-foreground">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background text-foreground">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px] bg-page-glow" />
       <Nav />
       <main>

@@ -4,7 +4,7 @@ import { whatsappAppointmentUrl } from "@/content/links";
 
 const links = [
   { href: "#medico", label: "O médico" },
-  { href: "#especialidades", label: "Especialidades" },
+  { href: "#especialidades", label: "Áreas de Atuação" },
   { href: "#consultorio", label: "Consultório" },
   { href: "#contato", label: "Contato" },
 ];
@@ -20,21 +20,23 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-[#764046] bg-[#5a1f23]/[0.97] shadow-[0_14px_34px_rgba(35,10,14,0.14)] backdrop-blur-[2px]"
-          : "border-[#7a3836] bg-[#612326]"
+          ? "bg-[#5a1f23]/[0.97] shadow-[0_14px_34px_rgba(35,10,14,0.14)] backdrop-blur-[2px]"
+          : "bg-[#612326] shadow-none"
       }`}
+      style={{ marginTop: 0 }}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5 lg:px-12">
-        <a href="#top" className="flex items-center gap-3">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 sm:py-5 lg:px-12">
+        <a href="#top" className="flex min-w-0 items-center gap-3">
           <img
             src={doctorLogo}
             alt="Logo Dr. Fabiano Roberto Fugita"
-            className="h-9 w-auto object-contain sm:h-11"
+            className="h-9 w-auto shrink-0 object-contain sm:h-11"
           />
-          <span className="font-serif text-[16px] leading-none tracking-tight text-bone sm:text-[22px]">
-            Dr. Fabiano Roberto Fugita
+          <span className="min-w-0 truncate font-serif text-[11px] leading-none tracking-tight text-bone sm:text-[22px]">
+            <span className="sm:hidden">Dr. Fabiano Fugita</span>
+            <span className="hidden sm:inline">Dr. Fabiano Roberto Fugita</span>
           </span>
         </a>
 
