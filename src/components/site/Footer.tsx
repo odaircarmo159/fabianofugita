@@ -32,10 +32,10 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <img
                 src={doctorLogo}
-                alt="Logo Dr. Fabiano Roberto Fugita"
+                alt="Logo Dr. Fabiano Fugita"
                 className="h-12 w-auto object-contain opacity-95"
               />
-              <p className="font-serif text-xl">Dr. Fabiano Roberto Fugita</p>
+              <p className="font-serif text-xl">Dr. Fabiano Fugita</p>
             </div>
             <p className="mt-1 text-[12px] text-bone/55">
               CRM 9145 RQE 8667 · Urologia &amp; Uro-Oncologia · © {new Date().getFullYear()}
@@ -115,7 +115,7 @@ export function Footer() {
           </div>
 
           <div className="mt-8 border-t border-white/8 pt-5 text-[11px] text-bone/35">
-            <p>© {new Date().getFullYear()} Dr. Fabiano Roberto Fugita. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Dr. Fabiano Fugita. Todos os direitos reservados.</p>
             <p className="mt-1">Desenvolvido por YouSystem.</p>
           </div>
         </div>

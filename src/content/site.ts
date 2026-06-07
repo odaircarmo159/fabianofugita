@@ -18,8 +18,8 @@ export const siteContent = {
     primaryCta: "Marcar atendimento",
     secondaryCta: "Conhecer o médico",
     stats: [
-      { value: "+15", label: "anos dedicados ao cuidado urológico" },
-      { value: "+5k", label: "pacientes acompanhados com atenção individual" },
+      { value: "+10 anos", label: "de medicina" },
+      { value: "5 Mil", label: "pacientes acompanhados" },
       { value: "360°", label: "olhar integral do diagnóstico ao seguimento" },
     ],
   },
@@ -49,36 +49,61 @@ export const siteContent = {
     title: "Cuidado especializado em",
     titleAccent: "urologia e oncologia urológica",
     body:
-      "A atuação combina investigação criteriosa, definição terapêutica responsável e seguimento próximo, respeitando o momento de cada paciente.",
+      "A atuação reúne os principais cuidados em urologia clínica, oncológica e saúde sexual masculina.",
     areas: [
       {
         title: "Consulta urológica",
-        desc: "Avaliação de sintomas urinários, dor, alterações prostáticas e saúde do homem com plano individualizado.",
+        desc: "Avaliação individualizada de sintomas urinários e saúde do homem.",
         icon: "heart",
       },
       {
         title: "Câncer de próstata",
-        desc: "Rastreamento, diagnóstico, estadiamento e acompanhamento com explicações claras em cada decisão.",
+        desc: "Rastreamento, diagnóstico e acompanhamento especializado.",
         icon: "pulse",
       },
       {
         title: "Tumores urológicos",
-        desc: "Abordagem de rim, bexiga, testículo e vias urinárias com olhar multidisciplinar e técnico.",
+        desc: "Abordagem de rim, bexiga, testículo e vias urinárias.",
         icon: "shield",
       },
       {
+        title: "Disfunção erétil",
+        desc: "Investigação e tratamento com abordagem individualizada.",
+        icon: "heart",
+      },
+      {
+        title: "Ejaculação precoce",
+        desc: "Diagnóstico e tratamento focados em qualidade de vida.",
+        icon: "message",
+      },
+      {
+        title: "Ejaculação retardada",
+        desc: "Avaliação clínica e definição terapêutica adequada.",
+        icon: "monitor",
+      },
+      {
+        title: "Desordens sexuais",
+        desc: "Avaliação especializada das principais queixas sexuais masculinas.",
+        icon: "message",
+      },
+      {
+        title: "Patologias sexuais",
+        desc: "Investigação clínica e orientação terapêutica individualizada.",
+        icon: "heart",
+      },
+      {
         title: "Segunda opinião",
-        desc: "Revisão cuidadosa de exames e propostas terapêuticas para apoiar escolhas mais seguras.",
+        desc: "Revisão de exames e condutas com mais segurança.",
         icon: "message",
       },
       {
         title: "Seguimento e vigilância",
-        desc: "Acompanhamento longitudinal após diagnóstico, cirurgia ou tratamento clínico.",
+        desc: "Acompanhamento após diagnóstico, cirurgia ou tratamento clínico.",
         icon: "monitor",
       },
       {
         title: "Prevenção e check-up",
-        desc: "Estratégias preventivas voltadas à saúde masculina e ao envelhecimento com qualidade.",
+        desc: "Prevenção voltada à saúde masculina e rastreamento.",
         icon: "family",
       },
     ],

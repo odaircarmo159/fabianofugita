@@ -1,14 +1,11 @@
-import careHands from "@/assets/doctor-working.jpeg";
+import { useEffect, useState } from "react";
+import doctorCirurgiaHero from "@/assets/doctor-cirurgia-hero.png";
+import careHands from "@/assets/doctor-working.png";
 import doctorLogo from "@/assets/logo.png";
 
 const credentials = [
-  {
-    year: "Graduação",
-    title: "Física",
-    org: "Universidade Estadual Paulista (UNESP)",
-  },
   { year: "Graduação", title: "Medicina", org: "Universidade Federal da Grande Dourados" },
-  { year: "Residência", title: "Cirurgia Geral", org: "Hospital Regional de Mato Grosso do Sul" },
+  { year: "Residência", title: "Cirurgia Geral", org: "Hospital de referência em alta complexidade" },
   { year: "Residência", title: "Urologia", org: "HUMAP / Universidade Federal de Mato Grosso do Sul" },
   {
     year: "Fellowship",
@@ -17,7 +14,28 @@ const credentials = [
   },
 ];
 
+const galleryImages = [
+  {
+    src: careHands,
+    alt: "Dr. Fabiano Fugita realizando cirurgia minimamente invasiva com tecnologia avançada",
+  },
+  {
+    src: doctorCirurgiaHero,
+    alt: "Dr. Fabiano Fugita em procedimento cirúrgico com equipe e videolaparoscopia",
+  },
+] as const;
+
 export function AboutDoctor() {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % galleryImages.length);
+    }, 3500);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section id="medico" className="relative -mt-6 pb-4 sm:-mt-10 md:-mt-14">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(122,44,45,0.08),transparent_68%)]" />
@@ -38,15 +56,30 @@ export function AboutDoctor() {
             </div>
 
             <div className="reveal col-span-12 md:col-span-4" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
-              <div className="group mx-auto aspect-[4/5] max-w-[620px] overflow-hidden rounded-[24px] bg-secondary shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
-                <img
-                  src={careHands}
-                  alt="Dr. Fabiano Fugita realizando cirurgia minimamente invasiva com tecnologia avançada"
-                  loading="lazy"
-                  width={1080}
-                  height={1350}
-                  className="h-full w-full object-cover object-center transition-transform duration-[1400ms] group-hover:scale-[1.05]"
-                />
+              <div className="group relative mx-auto aspect-[4/5] max-w-[620px] overflow-hidden rounded-[24px] bg-secondary shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
+                {galleryImages.map((image, index) => (
+                  <img
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    width={1080}
+                    height={1350}
+                    className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-[1400ms] group-hover:scale-[1.05] ${
+                      activeImage === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-black/20 px-3 py-2 backdrop-blur-sm">
+                  {galleryImages.map((image, index) => (
+                    <span
+                      key={image.alt}
+                      className={`h-2 w-2 rounded-full transition-colors ${
+                        activeImage === index ? "bg-white" : "bg-white/40"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 

@@ -7,7 +7,6 @@ import {
 
 const features = [
   "Clínica Serenus para consultas e acompanhamentos",
-  "Atuação no Hospital Regional de Dourados",
   "Estrutura organizada para consultas, retornos e seguimento",
   "Ambientes voltados ao acolhimento e à orientação do paciente",
 ];
@@ -17,11 +16,6 @@ const places = [
     name: "Clínica Serenus",
     description: "Atendimento em consultório para avaliação, acompanhamento e seguimento urológico.",
     details: consultorioAddress,
-  },
-  {
-    name: "Hospital Regional de Dourados",
-    description: "Atuação hospitalar com foco em procedimentos, cirurgias e suporte especializado quando necessário.",
-    details: "BR-463, 37 - Dourados, MS",
   },
 ];
 
@@ -85,13 +79,11 @@ export function Consultorio() {
           <div className="reveal col-span-12 md:col-span-5">
             <p className="eyebrow text-forest">03 / Locais de atendimento</p>
             <h2 className="mt-5 font-serif text-[32px] leading-[1.02] text-balance sm:mt-6 sm:text-[40px] md:text-[52px]">
-              Presença em clínica e em <em className="italic text-forest">atuação hospitalar</em>.
+              Um espaço pensado para <em className="italic text-forest">acolhimento e discrição</em>.
             </h2>
             <p className="mt-5 text-[14px] leading-relaxed text-foreground/80 sm:mt-6 sm:text-[15px]">
-              O atendimento não acontece em clínica própria. A atuação está
-              concentrada na Clínica Serenus, para consultas e acompanhamento,
-              e também no Hospital Regional de Dourados, conforme a necessidade
-              clínica e hospitalar de cada caso.
+              O atendimento está concentrado na Clínica Serenus, com ambiente
+              voltado para consultas, acompanhamento e orientação individualizada.
             </p>
             <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">
               A imagem atual segue como apoio visual da seção. Quando houver

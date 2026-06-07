@@ -1,4 +1,4 @@
-import { consultorioAddress, googleMapsConsultorioUrl, whatsappAppointmentUrl } from "@/content/links";
+import { consultorioAddress, googleMapsConsultorioUrl } from "@/content/links";
 
 export function LocalSeo() {
   return (
@@ -21,12 +21,11 @@ export function LocalSeo() {
               prostáticos, segunda opinião e cuidado oncológico com escuta individualizada.
             </p>
             <p className="mt-5 text-[15px] leading-relaxed text-foreground/80 sm:text-[16px]">
-              O atendimento acontece na Clínica Serenus e a atuação também se estende ao
-              Hospital Regional de Dourados, unindo consulta especializada, seguimento clínico
-              e suporte hospitalar quando necessário.
+              O atendimento acontece na Clínica Serenus, unindo consulta
+              especializada, seguimento clínico e orientação individualizada.
             </p>
 
-            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-4">
               <a
                 href={googleMapsConsultorioUrl}
                 target="_blank"
@@ -35,17 +34,6 @@ export function LocalSeo() {
               >
                 <p className="eyebrow text-muted-foreground">Clínica Serenus</p>
                 <p className="mt-3 text-[14px] leading-relaxed text-foreground sm:text-[15px]">{consultorioAddress}</p>
-              </a>
-              <a
-                href={whatsappAppointmentUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="border border-border bg-background px-5 py-5 transition-transform duration-300 hover:-translate-y-1 sm:px-6"
-              >
-                <p className="eyebrow text-muted-foreground">Locais de atuação</p>
-                <p className="mt-3 text-[14px] leading-relaxed text-foreground sm:text-[15px]">
-                  Clínica Serenus para consultas e Hospital Regional de Dourados para atuação hospitalar.
-                </p>
               </a>
             </div>
           </div>

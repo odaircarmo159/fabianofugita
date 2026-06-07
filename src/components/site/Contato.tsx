@@ -30,7 +30,7 @@ export function Contato() {
           <div className="col-span-12 md:col-span-7">
             <img
               src={doctorLogo}
-              alt="Logo Dr. Fabiano Roberto Fugita"
+              alt="Logo Dr. Fabiano Fugita"
               className="mb-5 h-12 w-auto object-contain opacity-90 sm:h-14"
             />
             <p className="eyebrow text-bone/60">04 / Contato</p>
@@ -51,8 +51,8 @@ export function Contato() {
                 Agendamento facilitado
               </p>
               <p className="mt-3 text-[13px] leading-relaxed text-bone/75 sm:text-[14px]">
-                Pelo WhatsApp, a equipe pode orientar sobre horários, Clínica Serenus,
-                atuação no Hospital Regional de Dourados e primeiras informações antes da consulta.
+                Pelo WhatsApp, a equipe pode orientar sobre horários, Clínica Serenus
+                e primeiras informações antes da consulta.
               </p>
               <p className="mt-3 text-[13px] leading-relaxed text-bone/60">
                 Contatos adicionais informados no material do consultório:

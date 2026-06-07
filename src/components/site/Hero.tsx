@@ -10,7 +10,7 @@ export function Hero() {
           <div className="absolute inset-x-0 bottom-0 top-[68px] sm:top-[84px]">
             <img
               src={doctorHeroLandscape}
-              alt="Dr. Fabiano Roberto Fugita"
+              alt="Dr. Fabiano Fugita"
               width={1536}
               height={1024}
               className="absolute inset-y-0 right-0 h-full w-full object-cover object-[72%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
@@ -24,11 +24,6 @@ export function Hero() {
 
           <div className="relative z-10 grid min-h-[540px] grid-cols-12 pt-[68px] sm:pt-[84px] md:min-h-[620px] lg:min-h-[680px]">
             <div className="col-span-12 px-6 py-10 sm:px-8 sm:py-14 md:col-span-8 md:px-12 md:py-16 lg:px-16 lg:py-20">
-              <p className="eyebrow text-bone/68">
-                <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-[#d7b183] align-middle animate-blink" />
-                CRM 9145 RQE 8667
-              </p>
-
               <h1 className="mt-8 max-w-[13ch] font-serif text-[36px] leading-[0.96] tracking-tight text-bone sm:text-[44px] md:mt-9 md:text-[56px] lg:max-w-[14ch] lg:text-[72px]">
                 Urologia com precisão e presença.
               </h1>

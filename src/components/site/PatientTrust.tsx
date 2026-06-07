@@ -3,16 +3,17 @@ import { CountUp } from "@/components/site/CountUp";
 const trustMetrics = [
   {
     value: 5,
-    prefix: "+",
-    suffix: " mil",
+    prefix: "",
+    suffix: " Mil",
     decimals: 0,
-    label: "pacientes acompanhados ao longo da trajetória",
+    label: "pacientes acompanhados",
   },
   {
-    value: 15,
+    value: 10,
     prefix: "+",
+    suffix: " anos",
     decimals: 0,
-    label: "anos de experiência em urologia",
+    label: "de medicina",
   },
 ];
 

@@ -9,10 +9,10 @@ export const cfmSearchUrl = "https://portal.cfm.org.br/busca-medicos";
 export const lattesProfileUrl = "http://lattes.cnpq.br/3075899254785840";
 
 export const consultorioAddress =
-  "R. João Rosa Góes, 1134 - Jardim América, Dourados, MS, Brazil, 79825-070";
+  "Av. Presidente Vargas, 1158, Vila Progresso, Dourados, MS, Brazil, 79825-090";
 
 export const googleMapsConsultorioUrl =
-  "https://www.google.com/maps/search/?api=1&query=R.%20Jo%C3%A3o%20Rosa%20G%C3%B3es%2C%201134%20-%20Jardim%20Am%C3%A9rica%2C%20Dourados%2C%20MS%2C%20Brazil%2C%2079825-070";
+  "https://www.google.com/maps/search/?api=1&query=Av.%20Presidente%20Vargas%2C%201158%2C%20Vila%20Progresso%2C%20Dourados%2C%20MS%2C%20Brazil%2C%2079825-090";
 
 export const googleMapsConsultorioEmbedUrl =
-  "https://www.google.com/maps?q=R.%20Jo%C3%A3o%20Rosa%20G%C3%B3es%2C%201134%20-%20Jardim%20Am%C3%A9rica%2C%20Dourados%2C%20MS%2C%20Brazil%2C%2079825-070&output=embed";
+  "https://www.google.com/maps?q=Av.%20Presidente%20Vargas%2C%201158%2C%20Vila%20Progresso%2C%20Dourados%2C%20MS%2C%20Brazil%2C%2079825-090&output=embed";

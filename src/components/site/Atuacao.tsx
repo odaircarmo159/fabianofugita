@@ -1,14 +1,25 @@
+import cancerProstataIcon from "@/assets/cancer-prostata.png";
 import checkupIcon from "@/assets/checkup.png";
 import consultaIcon from "@/assets/consulta.png";
+import desfuncaoEretilIcon from "@/assets/desfuncao-eretil.png";
+import desordemSexualIcon from "@/assets/desordem-sexual.png";
+import ejaculacaoPrecoceIcon from "@/assets/ejaculacao-precoce.png";
+import ejaculacaoRetardadaIcon from "@/assets/ejaculacao-retardada.png";
 import investigacaoIcon from "@/assets/investigacao.png";
+import patologiaSexualIcon from "@/assets/patologia-sexual.png";
 import segundaOpiniaoIcon from "@/assets/segunda-opiniao.png";
 import tumoresUrologicosIcon from "@/assets/tumores-urologicos.png";
 import { siteContent } from "@/content/site";
 
 const iconMap = {
   "Consulta urológica": consultaIcon,
-  "Câncer de próstata": investigacaoIcon,
+  "Câncer de próstata": cancerProstataIcon,
   "Tumores urológicos": tumoresUrologicosIcon,
+  "Disfunção erétil": desfuncaoEretilIcon,
+  "Ejaculação precoce": ejaculacaoPrecoceIcon,
+  "Ejaculação retardada": ejaculacaoRetardadaIcon,
+  "Desordens sexuais": desordemSexualIcon,
+  "Patologias sexuais": patologiaSexualIcon,
   "Segunda opinião": segundaOpiniaoIcon,
   "Seguimento e vigilância": investigacaoIcon,
   "Prevenção e check-up": checkupIcon,
@@ -31,18 +42,16 @@ export function Atuacao() {
           <h2 className="reveal mt-5 font-serif text-[44px] italic leading-[0.95] text-forest sm:text-[56px] md:text-[78px] lg:text-[92px]">
             Áreas de Atuação
           </h2>
-          <p className="reveal mx-auto mt-6 max-w-[820px] text-[18px] leading-relaxed text-foreground/78 sm:text-[20px]">
-            Tratamento urológico com diagnóstico preciso, condução técnica e
-            acompanhamento próximo em cada etapa do cuidado.
+          <p className="reveal mx-auto mt-6 max-w-[760px] text-[17px] leading-relaxed text-foreground/78 sm:text-[19px]">
+            Principais áreas de atendimento com leitura rápida e abordagem objetiva.
           </p>
         </div>
 
-        <div className="scrollbar-elegant mt-14 overflow-x-auto pb-3 sm:mt-16">
-          <div className="flex min-w-max gap-5 lg:gap-7">
+        <div className="mt-14 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 xl:grid-cols-3">
           {areas.map((a) => (
             <article
               key={a.title}
-              className="reveal group relative flex min-h-[430px] w-[320px] shrink-0 flex-col overflow-hidden border border-[#ead9cc] bg-[#fffaf6] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#caa98f] hover:shadow-[0_28px_60px_-42px_rgba(98,35,38,0.24)] sm:min-h-[460px] sm:w-[340px] sm:p-10"
+              className="reveal group relative flex min-h-[250px] flex-col overflow-hidden border border-[#ead9cc] bg-[#fffaf6] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#caa98f] hover:shadow-[0_28px_60px_-42px_rgba(98,35,38,0.24)] sm:min-h-[270px] sm:p-7"
               style={{ borderRadius: "24px" }}
             >
               <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#b88462_0%,#8f3b37_100%)] opacity-80" />
@@ -51,40 +60,19 @@ export function Atuacao() {
                   src={iconMap[a.title as keyof typeof iconMap]}
                   alt=""
                   aria-hidden="true"
-                  className="h-16 w-16 object-contain opacity-95"
+                  className="h-12 w-12 object-contain opacity-95 sm:h-14 sm:w-14"
                 />
-                <span className="font-serif text-[18px] italic text-[#c5ab96]">{a.n}</span>
+                <span className="font-serif text-[16px] italic text-[#c5ab96]">{a.n}</span>
               </div>
 
-              <h3 className="mt-10 max-w-[12ch] font-sans text-[28px] font-semibold leading-[1.02] text-forest">
+              <h3 className="mt-6 max-w-[16ch] font-sans text-[22px] font-semibold leading-[1.06] text-forest sm:text-[24px]">
                 {a.title}
               </h3>
-              <p className="mt-5 max-w-[26ch] text-[17px] leading-[1.32] text-foreground/76">
+              <p className="mt-3 max-w-[28ch] text-[14px] leading-[1.4] text-foreground/76 sm:text-[15px]">
                 {a.desc}
               </p>
-
-              <a
-                href="#contato"
-                className="mt-auto inline-flex items-center justify-center gap-3 self-start border border-[#d8b392] bg-transparent px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.08em] text-forest transition-colors duration-300 hover:border-[#8f3b37] hover:bg-[#8f3b37] hover:text-white"
-                style={{ borderRadius: "999px" }}
-              >
-                Saiba mais
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M8 12h8" />
-                  <path d="M13 7l5 5-5 5" />
-                </svg>
-              </a>
             </article>
           ))}
-          </div>
         </div>
       </div>
     </section>
