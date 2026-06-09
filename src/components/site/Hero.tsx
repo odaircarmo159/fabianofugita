@@ -13,10 +13,10 @@ export function Hero() {
               alt="Dr. Fabiano Fugita"
               width={1536}
               height={1024}
-              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[72%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
+              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[82%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.72)_58%,oklch(var(--forest)/0.34)_72%,transparent_88%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_24%,oklch(var(--sage)/0.08),transparent_22%),linear-gradient(180deg,oklch(var(--ink)/0.12)_0%,transparent_34%,oklch(var(--ink)/0.14)_100%)]" />
+            <div className="absolute inset-0 bg-[rgba(64,24,28,0.5)] md:bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.72)_58%,oklch(var(--forest)/0.34)_72%,transparent_88%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_26%,oklch(var(--sage)/0.08),transparent_20%),linear-gradient(180deg,oklch(var(--ink)/0.14)_0%,transparent_32%,oklch(var(--ink)/0.16)_100%)]" />
           </div>
 
           <div className="pointer-events-none absolute inset-0 grain opacity-[0.08]" />
