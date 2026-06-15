@@ -46,16 +46,16 @@ export function AboutDoctor() {
           <div className="pointer-events-none absolute right-0 top-0 h-32 w-40 bg-[radial-gradient(circle_at_top_right,rgba(122,44,45,0.08),transparent_70%)]" />
 
           <div className="grid grid-cols-12 gap-x-8 gap-y-10 sm:gap-y-12">
-            <div className="reveal col-span-12 md:col-span-4" data-reveal="left">
+            <div className="reveal col-span-12 min-w-0 md:col-span-12 lg:col-span-4" data-reveal="left">
               <div className="mx-auto max-w-[620px] md:mx-0">
                 <p className="eyebrow text-forest">01 / O médico</p>
-                <h2 className="mt-5 font-serif text-[29px] leading-[1.02] text-balance sm:mt-6 sm:text-[40px] md:text-[56px]">
-                  Técnica, escuta e <em className="italic text-forest">presença</em> em cada consulta.
+                <h2 className="mt-5 max-w-[10ch] font-serif text-[29px] leading-[1.02] sm:mt-6 sm:text-[38px] md:max-w-[12ch] md:text-[42px] lg:max-w-[11ch] lg:text-[46px] xl:text-[52px]">
+                  Técnica, atenção e acompanhamento de <em className="italic text-forest">pós-operatórios.</em>
                 </h2>
               </div>
             </div>
 
-            <div className="reveal col-span-12 md:col-span-4" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
+            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-4" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
               <div className="group relative mx-auto aspect-[4/5] max-w-[620px] overflow-hidden rounded-[24px] bg-secondary shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
                 {galleryImages.map((image, index) => (
                   <img
@@ -83,21 +83,11 @@ export function AboutDoctor() {
               </div>
             </div>
 
-            <div className="reveal col-span-12 md:col-span-4" data-reveal="right" style={{ transitionDelay: "220ms" }}>
+            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-4" data-reveal="right" style={{ transitionDelay: "220ms" }}>
               <div className="mx-auto max-w-[620px] md:mx-0">
                 <p className="text-[15px] leading-relaxed text-foreground/80 sm:text-[16px]">
-                  A consulta médica precisa ser um espaço de confiança, mas também
-                  de preparo técnico para indicar, no momento certo, a melhor
-                  estratégia de tratamento. Cada atendimento é conduzido com tempo,
-                  atenção e linguagem clara, para que o paciente compreenda o
-                  diagnóstico e se sinta seguro em cada decisão.
-                </p>
-                <p className="mt-5 text-[15px] leading-relaxed text-foreground/80 sm:text-[16px]">
-                  A atuação reúne urologia geral, cânceres urológicos, doenças da
-                  próstata, cálculo urinário e cirurgia minimamente invasiva, com
-                  experiência em técnicas avançadas e recursos tecnológicos que
-                  ampliam a precisão cirúrgica, favorecem abordagens menos invasivas
-                  e tornam o cuidado mais individualizado.
+                  Cada técnica cirúrgica operatória e estratégia terapêutica clínica
+                  somam-se no tratamento integral do paciente.
                 </p>
                 <div className="mt-8 border-l border-forest/20 pl-5">
                   <p className="text-[13px] uppercase tracking-[0.18em] text-forest/70">

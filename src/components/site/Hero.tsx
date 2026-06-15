@@ -1,4 +1,5 @@
-import doctorHeroLandscape from "@/assets/doctor-hero-paisagem.png";
+import doctorHeroLandscape from "@/assets/fundo-hospital.png";
+import doctorHeroOverlay from "@/assets/doctor-hero-overlay.png";
 import { whatsappAppointmentUrl } from "@/content/links";
 
 
@@ -15,15 +16,16 @@ export function Hero() {
               height={1024}
               className="absolute inset-y-0 right-0 h-full w-full object-cover object-[82%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
             />
-            <div className="absolute inset-0 bg-[rgba(64,24,28,0.5)] md:bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.72)_58%,oklch(var(--forest)/0.34)_72%,transparent_88%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_26%,oklch(var(--sage)/0.08),transparent_20%),linear-gradient(180deg,oklch(var(--ink)/0.14)_0%,transparent_32%,oklch(var(--ink)/0.16)_100%)]" />
+            <div className="absolute inset-0 bg-[rgba(64,24,28,0.42)] md:bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.66)_58%,oklch(var(--forest)/0.22)_72%,oklch(var(--forest)/0.06)_84%,transparent_94%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_79%_38%,rgba(64,24,28,0.00)_0%,rgba(64,24,28,0.01)_20%,rgba(64,24,28,0.08)_40%,rgba(64,24,28,0.16)_62%,transparent_80%),radial-gradient(circle_at_20%_26%,oklch(var(--sage)/0.08),transparent_20%),linear-gradient(180deg,oklch(var(--ink)/0.10)_0%,transparent_32%,oklch(var(--ink)/0.14)_100%)]" />
+            <div className="absolute inset-y-[10%] right-[6%] hidden w-[34%] rounded-[44px] bg-[radial-gradient(ellipse_at_center,rgba(64,24,28,0.00),rgba(64,24,28,0.02)_36%,rgba(64,24,28,0.08)_62%,transparent_100%)] blur-[24px] md:block" />
           </div>
 
           <div className="pointer-events-none absolute inset-0 grain opacity-[0.08]" />
           <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_top_left,oklch(var(--sage)/0.08),transparent_28%)] md:w-[55%]" />
 
           <div className="relative z-10 grid min-h-[540px] grid-cols-12 pt-[68px] sm:pt-[84px] md:min-h-[620px] lg:min-h-[680px]">
-            <div className="col-span-12 px-6 py-10 sm:px-8 sm:py-14 md:col-span-8 md:px-12 md:py-16 lg:px-16 lg:py-20">
+            <div className="col-span-12 px-6 py-10 sm:px-8 sm:py-14 md:col-span-7 md:px-12 md:py-16 lg:px-16 lg:py-20">
               <h1 className="mt-8 max-w-[13ch] font-serif text-[36px] leading-[0.96] tracking-tight text-bone sm:text-[44px] md:mt-9 md:text-[56px] lg:max-w-[14ch] lg:text-[72px]">
                 Urologia com precisão e presença.
               </h1>
@@ -57,6 +59,19 @@ export function Hero() {
                 <p className="mt-4 text-[12px] uppercase tracking-[0.16em] text-bone/68 sm:text-[13px]">
                   Atendimento em Dourados-MS
                 </p>
+              </div>
+            </div>
+
+            <div className="relative col-span-12 hidden md:col-span-5 md:block">
+              <div className="absolute inset-x-0 bottom-[-2%] top-[10%]">
+                <div className="absolute bottom-[4%] left-[54%] h-[80%] w-[74%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,245,233,0.10)_0%,rgba(64,24,28,0.04)_44%,transparent_74%)] blur-[28px]" />
+                <img
+                  src={doctorHeroOverlay}
+                  alt="Dr. Fabiano Fugita"
+                  width={779}
+                  height={1386}
+                  className="absolute bottom-0 left-[54%] h-[103%] w-auto max-w-none -translate-x-1/2 object-contain [filter:drop-shadow(0_18px_28px_rgba(40,12,16,0.22))]"
+                />
               </div>
             </div>
           </div>

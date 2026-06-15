@@ -6,7 +6,6 @@ import { Diferenciais } from "@/components/site/Diferenciais";
 import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 import { Hero } from "@/components/site/Hero";
-import { LocalSeo } from "@/components/site/LocalSeo";
 import { Nav } from "@/components/site/Nav";
 import { PatientTrust } from "@/components/site/PatientTrust";
 import { useReveal } from "@/hooks/use-reveal";
@@ -25,7 +24,6 @@ export default function App() {
         <Atuacao />
         <Diferenciais />
         <Consultorio />
-        <LocalSeo />
         <Contato />
       </main>
       <FloatingWhatsApp />

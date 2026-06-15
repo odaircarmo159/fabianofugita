@@ -6,6 +6,7 @@ import desordemSexualIcon from "@/assets/desordem-sexual.png";
 import ejaculacaoPrecoceIcon from "@/assets/ejaculacao-precoce.png";
 import ejaculacaoRetardadaIcon from "@/assets/ejaculacao-retardada.png";
 import investigacaoIcon from "@/assets/investigacao.png";
+import novembroAzulIcon from "@/assets/novembro-azul.png";
 import patologiaSexualIcon from "@/assets/patologia-sexual.png";
 import segundaOpiniaoIcon from "@/assets/segunda-opiniao.png";
 import tumoresUrologicosIcon from "@/assets/tumores-urologicos.png";
@@ -23,6 +24,7 @@ const iconMap = {
   "Segunda opinião": segundaOpiniaoIcon,
   "Seguimento e vigilância": investigacaoIcon,
   "Prevenção e check-up": checkupIcon,
+  "Conscientização da importância da saúde masculina": novembroAzulIcon,
 } as const;
 
 const areas = siteContent.specialties.areas.map((area, index) => ({

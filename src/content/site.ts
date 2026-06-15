@@ -106,6 +106,11 @@ export const siteContent = {
         desc: "Prevenção voltada à saúde masculina e rastreamento.",
         icon: "family",
       },
+      {
+        title: "Conscientização da importância da saúde masculina",
+        desc: "Orientação preventiva para incentivar cuidado contínuo, informação e acompanhamento especializado.",
+        icon: "family",
+      },
     ],
   },
   office: {

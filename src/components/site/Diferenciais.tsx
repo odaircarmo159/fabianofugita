@@ -10,7 +10,7 @@ const differentiators = [
       "O objetivo é que o paciente saia entendendo o diagnóstico, os próximos passos e as opções de tratamento, sem linguagem difícil.",
   },
   {
-    title: "Acompanhamento de verdade",
+    title: "Acompanhamento de perto",
     description:
       "Quando há cirurgia ou necessidade de seguimento, o cuidado continua no pós-operatório e nas revisões, com orientação em cada etapa.",
   },

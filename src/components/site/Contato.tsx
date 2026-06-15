@@ -57,7 +57,7 @@ export function Contato() {
               <p className="mt-3 text-[13px] leading-relaxed text-bone/60">
                 Contatos adicionais informados no material do consultório:
                 {" "}
-                (67) 99314-8040 e (67) 99116-1092.
+                (67) 99116-1092.
               </p>
             </div>
             <a
