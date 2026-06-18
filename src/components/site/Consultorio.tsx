@@ -22,9 +22,9 @@ const places = [
 export function Consultorio() {
   return (
     <section id="consultorio" className="border-t border-border">
-      <div className="mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
+      <div className="mx-auto max-w-[1400px] px-7 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
         <div className="grid grid-cols-12 gap-8">
-          <div className="reveal col-span-12 md:col-span-7">
+          <div className="reveal col-span-12 min-w-0 md:col-span-7">
             <div className="aspect-[16/10] overflow-hidden bg-secondary">
               <img
                 src={clinicRoom}
@@ -76,16 +76,16 @@ export function Consultorio() {
             </a>
           </div>
 
-          <div className="reveal col-span-12 md:col-span-5">
+          <div className="reveal col-span-12 min-w-0 md:col-span-5">
             <p className="eyebrow text-forest">03 / Locais de atendimento</p>
-            <h2 className="mt-5 font-serif text-[32px] leading-[1.02] text-balance sm:mt-6 sm:text-[40px] md:text-[52px]">
+            <h2 className="mt-5 max-w-[12ch] break-words text-pretty [overflow-wrap:anywhere] font-serif text-[28px] leading-[1.04] sm:mt-6 sm:max-w-full sm:text-[40px] md:text-[52px]">
               Um espaço pensado para <em className="italic text-forest">acolhimento e discrição</em>.
             </h2>
-            <p className="mt-5 text-[14px] leading-relaxed text-foreground/80 sm:mt-6 sm:text-[15px]">
+            <p className="mt-5 max-w-full text-[14px] leading-relaxed text-foreground/80 sm:mt-6 sm:max-w-none sm:text-[15px]">
               O atendimento está concentrado na Clínica Serenus, com ambiente
               voltado para consultas, acompanhamento e orientação individualizada.
             </p>
-            <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-full text-[13px] leading-relaxed text-muted-foreground sm:max-w-none">
               A imagem atual segue como apoio visual da seção. Quando houver
               fotos reais dos locais de atendimento, esta parte pode ficar ainda
               mais precisa e confiável.
@@ -94,7 +94,7 @@ export function Consultorio() {
             <ul className="mt-8 divide-y divide-border border-y border-border">
               {features.map((f) => (
                 <li key={f} className="flex items-center gap-4 py-4">
-                  <span className="text-[15px] text-foreground/85">{f}</span>
+                  <span className="max-w-full text-[15px] text-foreground/85 sm:max-w-none">{f}</span>
                 </li>
               ))}
             </ul>
@@ -103,10 +103,10 @@ export function Consultorio() {
               {places.map((place) => (
                 <div key={place.name} className="border border-border bg-card px-5 py-5">
                   <p className="eyebrow text-muted-foreground">{place.name}</p>
-                  <p className="mt-3 text-[14px] leading-relaxed text-foreground/85">
+                  <p className="mt-3 max-w-full text-[14px] leading-relaxed text-foreground/85 sm:max-w-none">
                     {place.description}
                   </p>
-                  <p className="mt-3 text-[14px] leading-relaxed text-foreground">
+                  <p className="mt-3 max-w-full text-[14px] leading-relaxed text-foreground sm:max-w-none">
                     {place.details}
                   </p>
                 </div>

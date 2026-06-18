@@ -1,5 +1,4 @@
-import doctorHeroLandscape from "@/assets/fundo-hospital.png";
-import doctorHeroOverlay from "@/assets/doctor-hero-overlay.png";
+import doctorHeroLandscape from "@/assets/doctor-hero-paisagem.png";
 import { whatsappAppointmentUrl } from "@/content/links";
 
 
@@ -8,70 +7,71 @@ export function Hero() {
     <section id="top" className="relative bg-forest">
       <div className="mx-auto max-w-[1920px] px-0 pb-0">
         <div className="relative overflow-hidden bg-forest text-bone">
-          <div className="absolute inset-x-0 bottom-0 top-[68px] sm:top-[84px]">
+          <div className="absolute inset-x-0 bottom-0 top-0">
             <img
               src={doctorHeroLandscape}
               alt="Dr. Fabiano Fugita"
               width={1536}
               height={1024}
-              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[82%_0%] md:object-[82%_0%] lg:object-[78%_0%]"
+              className="absolute inset-y-0 right-0 h-full w-full object-cover object-[74%_0%] md:object-[78%_10%] lg:object-[80%_12%]"
             />
-            <div className="absolute inset-0 bg-[rgba(64,24,28,0.42)] md:bg-[linear-gradient(90deg,oklch(var(--forest))_0%,oklch(var(--forest)/0.98)_34%,oklch(var(--forest)/0.92)_46%,oklch(var(--forest)/0.66)_58%,oklch(var(--forest)/0.22)_72%,oklch(var(--forest)/0.06)_84%,transparent_94%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_79%_38%,rgba(64,24,28,0.00)_0%,rgba(64,24,28,0.01)_20%,rgba(64,24,28,0.08)_40%,rgba(64,24,28,0.16)_62%,transparent_80%),radial-gradient(circle_at_20%_26%,oklch(var(--sage)/0.08),transparent_20%),linear-gradient(180deg,oklch(var(--ink)/0.10)_0%,transparent_32%,oklch(var(--ink)/0.14)_100%)]" />
-            <div className="absolute inset-y-[10%] right-[6%] hidden w-[34%] rounded-[44px] bg-[radial-gradient(ellipse_at_center,rgba(64,24,28,0.00),rgba(64,24,28,0.02)_36%,rgba(64,24,28,0.08)_62%,transparent_100%)] blur-[24px] md:block" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,11,12,0.08)_0%,rgba(14,11,12,0.02)_26%,rgba(14,11,12,0.14)_48%,rgba(14,11,12,0.64)_72%,rgba(14,11,12,0.92)_100%)] md:bg-[linear-gradient(90deg,rgba(18,13,13,0.96)_0%,rgba(18,13,13,0.92)_22%,rgba(47,23,25,0.82)_38%,rgba(47,23,25,0.56)_52%,rgba(47,23,25,0.14)_66%,rgba(47,23,25,0.04)_74%,transparent_82%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,10,11,0.44)_0%,rgba(13,10,11,0.16)_22%,rgba(13,10,11,0.08)_44%,rgba(13,10,11,0.28)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-[58%] bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.1)_30%,rgba(0,0,0,0.42)_100%)] md:inset-y-0 md:left-0 md:h-auto md:w-[56%] md:bg-[linear-gradient(135deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0.02)_28%,transparent_28%),linear-gradient(135deg,rgba(0,0,0,0.44)_0%,rgba(0,0,0,0.44)_18%,transparent_18%)]" />
           </div>
 
           <div className="pointer-events-none absolute inset-0 grain opacity-[0.08]" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_top_left,oklch(var(--sage)/0.08),transparent_28%)] md:w-[55%]" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-[radial-gradient(circle_at_top_left,oklch(var(--sage)/0.07),transparent_24%)] md:w-[55%]" />
+          <div className="pointer-events-none absolute left-[42%] top-1/2 hidden h-[720px] w-[720px] -translate-y-1/2 rounded-full border border-white/10 md:block" />
+          <div className="pointer-events-none absolute left-[48%] top-[54%] hidden h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 md:block" />
 
-          <div className="relative z-10 grid min-h-[540px] grid-cols-12 pt-[68px] sm:pt-[84px] md:min-h-[620px] lg:min-h-[680px]">
-            <div className="col-span-12 px-6 py-10 sm:px-8 sm:py-14 md:col-span-7 md:px-12 md:py-16 lg:px-16 lg:py-20">
-              <h1 className="mt-8 max-w-[13ch] font-serif text-[36px] leading-[0.96] tracking-tight text-bone sm:text-[44px] md:mt-9 md:text-[56px] lg:max-w-[14ch] lg:text-[72px]">
-                Urologia com precisão e presença.
-              </h1>
-              <h2 className="mt-4 max-w-[20ch] font-serif text-[21px] italic leading-[1.08] text-[#d7b183] sm:text-[25px] md:mt-5 md:text-[30px] lg:max-w-[22ch] lg:text-[38px]">
-                Uro-oncologia e cirurgia minimamente invasiva com condução clara.
-              </h2>
+          <div className="relative z-10 grid min-h-[620px] grid-cols-12 pt-[88px] sm:min-h-[680px] sm:pt-[108px] md:min-h-[760px] lg:min-h-[820px] lg:pt-[118px]">
+            <div className="col-span-12 flex items-end px-6 pb-10 pt-[240px] sm:px-8 sm:py-14 md:col-span-7 md:items-center md:px-12 md:py-16 lg:px-16 lg:py-20">
+              <div className="max-w-[720px]">
+                <div className="hidden w-fit border border-white/12 bg-white/4 px-4 py-3 backdrop-blur-[1px] sm:block sm:px-5">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-bone/60 sm:text-[11px]">
+                    Dr. Fabiano Fugita
+                  </p>
+                  <p className="mt-2 font-serif text-[28px] leading-none text-bone sm:text-[34px] lg:text-[44px]">
+                    Urologia
+                  </p>
+                </div>
 
-              <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
-                <a
-                  href={whatsappAppointmentUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-3 bg-[#d7b183] px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-forest transition-colors hover:bg-[#e3c49d] sm:w-auto sm:px-7"
-                  style={{ borderRadius: "12px" }}
-                >
-                  Agendar consulta
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-                </a>
-                <a
-                  href="#medico"
-                  className="group inline-flex items-center gap-2 text-[14px] text-bone/84 underline decoration-bone/26 underline-offset-[6px] transition-colors hover:text-bone hover:decoration-bone"
-                >
-                  Conheça o médico
-                </a>
-              </div>
+                <h1 className="mt-0 max-w-[10ch] font-serif text-[38px] leading-[0.94] tracking-tight text-bone sm:mt-8 sm:max-w-[11ch] sm:text-[54px] md:text-[68px] lg:text-[82px]">
+                  Urologia com precisão e presença.
+                </h1>
+                <h2 className="mt-4 max-w-[22ch] text-[15px] leading-relaxed text-bone/82 sm:mt-5 sm:text-[20px] md:max-w-[30ch] md:text-[22px] lg:text-[24px]">
+                  Uro-oncologia e cirurgia minimamente invasiva.
+                </h2>
 
-              <div className="mt-10 max-w-[620px] pl-5 sm:pl-6">
-                <p className="font-serif text-[19px] italic leading-tight text-bone sm:text-[21px] md:text-[24px]">
-                  Decisões seguras e acompanhamento próximo do diagnóstico ao seguimento.
-                </p>
-                <p className="mt-4 text-[12px] uppercase tracking-[0.16em] text-bone/68 sm:text-[13px]">
-                  Atendimento em Dourados-MS
-                </p>
-              </div>
-            </div>
+                <div className="mt-6 h-px w-full max-w-[520px] bg-white/30 sm:mt-8" />
 
-            <div className="relative col-span-12 hidden md:col-span-5 md:block">
-              <div className="absolute inset-x-0 bottom-[-2%] top-[10%]">
-                <div className="absolute bottom-[4%] left-[54%] h-[80%] w-[74%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,245,233,0.10)_0%,rgba(64,24,28,0.04)_44%,transparent_74%)] blur-[28px]" />
-                <img
-                  src={doctorHeroOverlay}
-                  alt="Dr. Fabiano Fugita"
-                  width={779}
-                  height={1386}
-                  className="absolute bottom-0 left-[54%] h-[103%] w-auto max-w-none -translate-x-1/2 object-contain [filter:drop-shadow(0_18px_28px_rgba(40,12,16,0.22))]"
-                />
+                <div className="mt-6 flex flex-col items-start gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:gap-x-8">
+                  <a
+                    href={whatsappAppointmentUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[rgba(143,48,56,0.88)] px-7 py-4 text-[13px] font-semibold tracking-[0.01em] text-white shadow-[0_12px_28px_rgba(66,18,24,0.32)] transition-colors hover:bg-[rgba(164,58,68,0.96)] sm:w-auto sm:min-w-[220px]"
+                  >
+                    Agendar consulta
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+                  </a>
+                  <a
+                    href="#medico"
+                    className="group inline-flex items-center gap-2 text-[14px] text-bone/84 underline decoration-bone/26 underline-offset-[6px] transition-colors hover:text-bone hover:decoration-bone"
+                  >
+                    Conheça o médico
+                  </a>
+                </div>
+
+                <div className="mt-7 max-w-[620px] border-l border-white/20 pl-4 sm:mt-10 sm:pl-6">
+                  <p className="font-serif text-[17px] italic leading-tight text-bone sm:text-[22px] md:text-[26px]">
+                    Decisões seguras e acompanhamento próximo do diagnóstico ao seguimento.
+                  </p>
+                  <p className="mt-4 text-[12px] uppercase tracking-[0.16em] text-bone/68 sm:text-[13px]">
+                    Atendimento em Dourados-MS
+                  </p>
+                </div>
               </div>
             </div>
           </div>

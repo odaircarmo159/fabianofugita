@@ -25,36 +25,36 @@ export function Contato() {
 
   return (
     <section id="contato" className="bg-ink text-bone">
-      <div className="mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
+      <div className="mx-auto max-w-[1400px] px-8 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
         <div className="grid grid-cols-12 gap-8 border-b hairline-light pb-12 sm:pb-16">
-          <div className="col-span-12 md:col-span-7">
+          <div className="col-span-12 min-w-0 md:col-span-7">
             <img
               src={doctorLogo}
               alt="Logo Dr. Fabiano Fugita"
               className="mb-5 h-12 w-auto object-contain opacity-90 sm:h-14"
             />
             <p className="eyebrow text-bone/60">04 / Contato</p>
-            <h2 className="reveal mt-5 font-serif text-[34px] leading-[1.02] text-balance sm:mt-6 sm:text-[48px] md:text-[80px] lg:text-[96px]">
+            <h2 className="reveal mt-5 max-w-[12ch] break-words text-pretty font-serif text-[30px] leading-[1.04] sm:mt-6 sm:max-w-full sm:text-[48px] md:text-[80px] lg:text-[96px]">
               Agende sua consulta
               <br />
               <em className="italic text-sage">com tranquilidade e atenção.</em>
             </h2>
           </div>
-          <div className="col-span-12 md:col-span-4 md:col-start-9">
-            <p className="text-[14px] leading-relaxed text-bone/75 sm:text-[15px]">
+          <div className="col-span-12 min-w-0 md:col-span-4 md:col-start-9">
+            <p className="max-w-full text-[14px] leading-relaxed text-bone/75 sm:max-w-none sm:text-[15px]">
               A equipe está disponível para orientar sobre horários, primeiras
               informações, local de atendimento e forma de acompanhamento.
               Escolha abaixo o canal que for mais confortável para você.
             </p>
-            <div className="mt-8 border-l border-sage/30 pl-5">
+            <div className="mt-8 border-l border-sage/30 pl-6">
               <p className="text-[13px] uppercase tracking-[0.18em] text-sage/70">
                 Agendamento facilitado
               </p>
-              <p className="mt-3 text-[13px] leading-relaxed text-bone/75 sm:text-[14px]">
+              <p className="mt-3 max-w-full text-[13px] leading-relaxed text-bone/75 sm:max-w-none sm:text-[14px]">
                 Pelo WhatsApp, a equipe pode orientar sobre horários, Clínica Serenus
                 e primeiras informações antes da consulta.
               </p>
-              <p className="mt-3 text-[13px] leading-relaxed text-bone/60">
+              <p className="mt-3 max-w-full text-[13px] leading-relaxed text-bone/60 sm:max-w-none">
                 Contatos adicionais informados no material do consultório:
                 {" "}
                 (67) 99116-1092.
@@ -79,14 +79,14 @@ export function Contato() {
               href={c.href}
               target={c.label !== "E-mail" ? "_blank" : undefined}
               rel={c.label !== "E-mail" ? "noreferrer" : undefined}
-              className="group col-span-12 bg-ink p-6 transition-colors hover:bg-forest sm:p-8 md:col-span-4"
+              className="group col-span-12 min-w-0 bg-ink p-6 transition-colors hover:bg-forest sm:p-8 md:col-span-4"
             >
               <p className="eyebrow text-bone/55">{c.label}</p>
               <p
                 className={`mt-5 font-serif leading-tight text-bone sm:mt-6 ${
                   c.label === "E-mail"
-                    ? "break-all text-[16px] sm:text-[20px] md:text-[22px]"
-                    : "text-[18px] sm:text-[22px] md:text-[24px]"
+                    ? "max-w-full break-all text-[16px] sm:max-w-none sm:text-[20px] md:text-[22px]"
+                    : "max-w-full break-words text-[18px] sm:max-w-none sm:text-[22px] md:text-[24px]"
                 }`}
               >
                 {c.value}

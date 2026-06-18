@@ -10,9 +10,21 @@ const links = [
 ];
 
 export function Nav() {
-  const [scrolled, setScrolled] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => {
+      const hero = document.getElementById("top");
+      if (!hero) {
+        setPastHero(window.scrollY > 12);
+        return;
+      }
+
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      const headerOffset = 96;
+      setPastHero(window.scrollY + headerOffset >= heroBottom);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -21,9 +33,9 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#5a1f23]/[0.97] shadow-[0_14px_34px_rgba(35,10,14,0.14)] backdrop-blur-[2px]"
-          : "bg-[#612326] shadow-none"
+        pastHero
+          ? "bg-[#5f2328]/[0.94] shadow-[0_14px_34px_rgba(42,11,16,0.24)] backdrop-blur-xl"
+          : "bg-[rgba(18,13,13,0.28)] shadow-none backdrop-blur-[6px]"
       }`}
       style={{ marginTop: 0 }}
     >
@@ -44,12 +56,12 @@ export function Nav() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-8 lg:gap-10 md:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-[14px] font-normal text-[#f1e4d6] transition-colors hover:text-white"
+              className="text-[14px] font-normal text-[#f3e8dc] transition-colors hover:text-white"
             >
               {l.label}
             </a>
@@ -60,8 +72,7 @@ export function Nav() {
           href={whatsappAppointmentUrl}
           target="_blank"
           rel="noreferrer"
-          className="hidden items-center gap-2 border border-[#d9b0a7] bg-[#87565b] px-5 py-2.5 text-[13px] font-medium tracking-wide text-[#fff1e6] transition-colors hover:bg-[#a66a71] hover:text-white md:inline-flex"
-          style={{ borderRadius: "999px" }}
+          className="hidden items-center gap-2 rounded-full bg-[#8f3038] px-5 py-2.5 text-[13px] font-medium tracking-wide text-white transition-colors hover:bg-[#a43a44] md:inline-flex"
         >
           Agendar consulta
         </a>

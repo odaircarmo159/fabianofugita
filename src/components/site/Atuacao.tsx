@@ -38,13 +38,13 @@ export function Atuacao() {
       id="especialidades"
       className="bg-[linear-gradient(180deg,#fbf6f2_0%,#f7efe7_100%)]"
     >
-      <div className="mx-auto max-w-[1680px] px-4 py-20 sm:px-6 sm:py-24 md:py-28 lg:px-12">
+      <div className="mx-auto max-w-[1680px] px-7 py-20 sm:px-6 sm:py-24 md:py-28 lg:px-12">
         <div className="mx-auto max-w-[860px] text-center">
           <p className="eyebrow text-[#8f6a58]">02 / Áreas de Atuação</p>
-          <h2 className="reveal mt-5 font-serif text-[44px] italic leading-[0.95] text-forest sm:text-[56px] md:text-[78px] lg:text-[92px]">
+          <h2 className="reveal mx-auto mt-5 max-w-[10ch] text-pretty font-serif text-[36px] italic leading-[0.95] text-forest sm:max-w-none sm:text-[56px] md:text-[78px] lg:text-[92px]">
             Áreas de Atuação
           </h2>
-          <p className="reveal mx-auto mt-6 max-w-[760px] text-[17px] leading-relaxed text-foreground/78 sm:text-[19px]">
+          <p className="reveal mx-auto mt-6 max-w-full text-[16px] leading-relaxed text-foreground/78 sm:max-w-[760px] sm:text-[19px]">
             Principais áreas de atendimento com leitura rápida e abordagem objetiva.
           </p>
         </div>
@@ -67,10 +67,10 @@ export function Atuacao() {
                 <span className="font-serif text-[16px] italic text-[#c5ab96]">{a.n}</span>
               </div>
 
-              <h3 className="mt-6 max-w-[16ch] font-sans text-[22px] font-semibold leading-[1.06] text-forest sm:text-[24px]">
+              <h3 className="mt-6 max-w-[15ch] text-pretty font-sans text-[20px] font-semibold leading-[1.08] text-forest sm:text-[24px]">
                 {a.title}
               </h3>
-              <p className="mt-3 max-w-[28ch] text-[14px] leading-[1.4] text-foreground/76 sm:text-[15px]">
+              <p className="mt-3 max-w-[30ch] text-[14px] leading-[1.5] text-foreground/76 sm:text-[15px]">
                 {a.desc}
               </p>
             </article>

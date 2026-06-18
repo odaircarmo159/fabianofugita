@@ -20,12 +20,12 @@ const trustMetrics = [
 export function PatientTrust() {
   return (
     <section className="border-t border-border bg-background">
-      <div className="mx-auto max-w-[1400px] px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
+      <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-6 sm:py-20 lg:px-12">
         <div className="reveal mx-auto grid max-w-[900px] grid-cols-1 divide-y divide-border border border-border bg-card md:grid-cols-2 md:divide-x md:divide-y-0">
           {trustMetrics.map((item) => (
             <article
               key={item.label}
-              className="flex min-h-[180px] flex-col items-center justify-center px-6 py-8 text-center sm:min-h-[220px] sm:px-8 sm:py-10"
+              className="flex min-h-[180px] flex-col items-center justify-center px-5 py-8 text-center sm:min-h-[220px] sm:px-8 sm:py-10"
             >
               <p className="font-serif text-[38px] leading-none text-ink sm:text-[44px] md:text-[56px]">
                 <CountUp

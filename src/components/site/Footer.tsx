@@ -90,8 +90,8 @@ export function Footer() {
               </a>
             </div>
             </div>
-            <div className="col-span-12 max-w-md text-[12px] text-bone/55 md:col-span-6 md:ml-auto md:text-right">
-              <p>
+            <div className="col-span-12 max-w-[31ch] text-[12px] text-bone/55 md:col-span-6 md:ml-auto md:max-w-md md:text-right">
+              <p className="leading-relaxed">
                 Este site tem finalidade informativa. A avaliação médica individual é essencial para
                 diagnóstico e definição do tratamento mais adequado.
               </p>

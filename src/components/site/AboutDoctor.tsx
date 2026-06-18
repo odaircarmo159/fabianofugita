@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import doctorCirurgiaHero from "@/assets/doctor-cirurgia-hero.png";
 import careHands from "@/assets/doctor-working.png";
+import aboutCarousel3 from "@/assets/about-carousel-3.jpeg";
+import aboutCarousel4 from "@/assets/about-carousel-4.png";
 import doctorLogo from "@/assets/logo.png";
 
 const credentials = [
   { year: "Graduação", title: "Medicina", org: "Universidade Federal da Grande Dourados" },
-  { year: "Residência", title: "Cirurgia Geral", org: "Hospital de referência em alta complexidade" },
+  { year: "Residência", title: "Cirurgia geral", org: "HRMS Hospital Regional de Mato Grosso do Sul" },
   { year: "Residência", title: "Urologia", org: "HUMAP / Universidade Federal de Mato Grosso do Sul" },
   {
     year: "Fellowship",
@@ -23,6 +25,14 @@ const galleryImages = [
     src: doctorCirurgiaHero,
     alt: "Dr. Fabiano Fugita em procedimento cirúrgico com equipe e videolaparoscopia",
   },
+  {
+    src: aboutCarousel3,
+    alt: "Dr. Fabiano Fugita em ambiente cirúrgico acompanhando procedimento urológico com monitorização por vídeo",
+  },
+  {
+    src: aboutCarousel4,
+    alt: "Dr. Fabiano Fugita em treinamento e observação técnica de procedimento com equipe médica",
+  },
 ] as const;
 
 export function AboutDoctor() {
@@ -39,24 +49,15 @@ export function AboutDoctor() {
   return (
     <section id="medico" className="relative -mt-6 pb-4 sm:-mt-10 md:-mt-14">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(122,44,45,0.08),transparent_68%)]" />
-      <div className="mx-auto max-w-[1400px] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-12">
-        <div className="relative overflow-hidden rounded-[28px] border border-[#e6ddd6] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,251,247,0.98))] px-5 py-10 shadow-[0_30px_80px_rgba(73,24,32,0.08)] backdrop-blur-sm sm:px-8 sm:py-12 md:px-10 md:py-14">
+      <div className="mx-auto max-w-[1400px] px-5 py-12 sm:px-6 sm:py-20 md:py-24 lg:px-12">
+        <div className="relative overflow-hidden rounded-[28px] border border-[#e6ddd6] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,251,247,0.98))] px-0 py-0 shadow-[0_30px_80px_rgba(73,24,32,0.08)] backdrop-blur-sm sm:px-8 sm:py-12 md:px-10 md:py-14">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#7a2c2d]/25 to-transparent" />
           <div className="pointer-events-none absolute -left-10 top-8 h-28 w-28 rounded-full bg-[#d7b183]/15 blur-3xl" />
           <div className="pointer-events-none absolute right-0 top-0 h-32 w-40 bg-[radial-gradient(circle_at_top_right,rgba(122,44,45,0.08),transparent_70%)]" />
 
-          <div className="grid grid-cols-12 gap-x-8 gap-y-10 sm:gap-y-12">
-            <div className="reveal col-span-12 min-w-0 md:col-span-12 lg:col-span-4" data-reveal="left">
-              <div className="mx-auto max-w-[620px] md:mx-0">
-                <p className="eyebrow text-forest">01 / O médico</p>
-                <h2 className="mt-5 max-w-[10ch] font-serif text-[29px] leading-[1.02] sm:mt-6 sm:text-[38px] md:max-w-[12ch] md:text-[42px] lg:max-w-[11ch] lg:text-[46px] xl:text-[52px]">
-                  Técnica, atenção e acompanhamento de <em className="italic text-forest">pós-operatórios.</em>
-                </h2>
-              </div>
-            </div>
-
-            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-4" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
-              <div className="group relative mx-auto aspect-[4/5] max-w-[620px] overflow-hidden rounded-[24px] bg-secondary shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
+          <div className="grid grid-cols-12 gap-x-8 gap-y-0 sm:gap-y-12">
+            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-5" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
+              <div className="group relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-none bg-secondary shadow-none sm:max-w-[620px] sm:rounded-[24px] sm:shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
                 {galleryImages.map((image, index) => (
                   <img
                     key={image.src}
@@ -83,28 +84,44 @@ export function AboutDoctor() {
               </div>
             </div>
 
-            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-4" data-reveal="right" style={{ transitionDelay: "220ms" }}>
-              <div className="mx-auto max-w-[620px] md:mx-0">
-                <p className="text-[15px] leading-relaxed text-foreground/80 sm:text-[16px]">
-                  Cada técnica cirúrgica operatória e estratégia terapêutica clínica
-                  somam-se no tratamento integral do paciente.
-                </p>
-                <div className="mt-8 border-l border-forest/20 pl-5">
-                  <p className="text-[13px] uppercase tracking-[0.18em] text-forest/70">
-                    Experiência percebida pelo paciente
+            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-7" data-reveal="right" style={{ transitionDelay: "220ms" }}>
+              <div className="mx-auto min-w-0 max-w-[620px] px-5 py-6 sm:px-0 sm:py-0 md:mx-0">
+                <p className="eyebrow text-forest">01 / O médico</p>
+                <h2 className="mt-4 max-w-full text-pretty break-words font-serif text-[clamp(1.85rem,8.8vw,3.5rem)] leading-[0.96] sm:mt-6 sm:max-w-[14ch] sm:text-[34px] md:max-w-[15ch] md:text-[42px] lg:max-w-[12ch] lg:text-[50px] xl:max-w-[13ch] xl:text-[56px]">
+                  <span className="sm:hidden">
+                    Técnica, atenção e acompanhamento de <em className="italic text-forest">pós-operatórios.</em>
+                  </span>
+                  <span className="hidden sm:inline">
+                    Técnica, atenção e
+                    <br />
+                    acompanhamento
+                    <br />
+                    de <em className="italic text-forest">pós-operatórios.</em>
+                  </span>
+                </h2>
+
+                <div className="mt-5 min-w-0 max-w-full sm:mt-8 sm:max-w-[34rem]">
+                  <p className="max-w-full break-words text-[14px] leading-relaxed text-foreground/78 sm:text-[16px]">
+                    Cada técnica cirúrgica operatória e estratégia terapêutica clínica
+                    somam-se no tratamento integral do paciente.
                   </p>
-                  <p className="mt-3 text-[14px] leading-relaxed text-foreground/80 sm:text-[15px]">
-                    Atendimento sem pressa, explicações acessíveis e acompanhamento
-                    próximo ajudam a unir tecnologia, precisão e confiança real
-                    durante toda a jornada do cuidado.
-                  </p>
+                  <div className="mt-5 w-full rounded-[18px] bg-[#7a2c2d]/[0.04] px-4 py-4 sm:mt-8 sm:rounded-none sm:bg-transparent sm:px-0 sm:py-0 sm:border-l sm:border-forest/20 sm:pl-5">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-forest/68 sm:text-[13px] sm:tracking-[0.18em]">
+                      Experiência percebida pelo paciente
+                    </p>
+                    <p className="mt-2 max-w-full break-words text-[13px] leading-relaxed text-foreground/76 sm:mt-3 sm:max-w-none sm:text-[15px] sm:text-foreground/80">
+                      Atendimento sem pressa, explicações acessíveis e acompanhamento
+                      próximo ajudam a unir tecnologia, precisão e confiança real
+                      durante toda a jornada do cuidado.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="reveal relative mt-20 overflow-hidden rounded-[32px] bg-[linear-gradient(180deg,#7a2c2d_0%,#632123_100%)] text-bone shadow-[0_34px_90px_rgba(73,24,32,0.18)] sm:mt-24">
+        <div className="reveal relative -mx-4 mt-20 overflow-hidden rounded-none bg-[linear-gradient(180deg,#7a2c2d_0%,#632123_100%)] text-bone shadow-none sm:mx-0 sm:mt-24 sm:rounded-[32px] sm:shadow-[0_34px_90px_rgba(73,24,32,0.18)]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(217,184,151,0.16),transparent_24%),radial-gradient(circle_at_84%_22%,rgba(255,255,255,0.06),transparent_22%),radial-gradient(circle_at_78%_82%,rgba(217,184,151,0.09),transparent_20%)]" />
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.04),transparent_38%,rgba(255,255,255,0.02)_62%,transparent_100%)]" />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/7 to-transparent" />
@@ -120,7 +137,7 @@ export function AboutDoctor() {
           <div className="relative px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
             <div className="max-w-[720px]">
               <p className="eyebrow text-[#d9b897]">Formação</p>
-              <h3 className="mt-4 font-serif text-[34px] leading-[0.98] sm:text-[42px] md:text-[48px]">
+              <h3 className="mt-4 max-w-[11ch] font-serif text-[30px] leading-[0.98] sm:max-w-none sm:text-[42px] md:text-[48px]">
                 Formação sólida e trajetória consistente.
               </h3>
             </div>
@@ -134,10 +151,10 @@ export function AboutDoctor() {
                   <span className="col-span-12 text-[11px] uppercase tracking-[0.18em] text-[#d9b897] md:col-span-2 md:self-center">
                     {c.year}
                   </span>
-                  <p className="col-span-12 font-serif text-[25px] leading-[1.02] text-bone md:col-span-5 md:text-[32px]">
+                  <p className="col-span-12 max-w-[12ch] font-serif text-[25px] leading-[1.02] text-bone md:col-span-5 md:max-w-none md:text-[32px]">
                     {c.title}
                   </p>
-                  <p className="col-span-12 text-[14px] leading-relaxed text-bone/76 md:col-span-5 md:text-right">
+                  <p className="col-span-12 max-w-[30ch] text-[14px] leading-relaxed text-bone/76 md:col-span-5 md:max-w-none md:text-right">
                     {c.org}
                   </p>
                 </article>
