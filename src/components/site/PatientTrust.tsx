@@ -1,4 +1,5 @@
 import { CountUp } from "@/components/site/CountUp";
+import "./PatientTrust.css";
 
 const trustMetrics = [
   {
@@ -19,15 +20,15 @@ const trustMetrics = [
 
 export function PatientTrust() {
   return (
-    <section className="border-t border-border bg-background">
-      <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-6 sm:py-20 lg:px-12">
-        <div className="reveal mx-auto grid max-w-[900px] grid-cols-1 divide-y divide-border border border-border bg-card md:grid-cols-2 md:divide-x md:divide-y-0">
+    <section className="patient-trust-section">
+      <div className="patient-trust-shell">
+        <div className="patient-trust-grid reveal">
           {trustMetrics.map((item) => (
             <article
               key={item.label}
-              className="flex min-h-[180px] flex-col items-center justify-center px-5 py-8 text-center sm:min-h-[220px] sm:px-8 sm:py-10"
+              className="patient-trust-card"
             >
-              <p className="font-serif text-[38px] leading-none text-ink sm:text-[44px] md:text-[56px]">
+              <p className="patient-trust-value">
                 <CountUp
                   end={item.value}
                   prefix={item.prefix}
@@ -35,7 +36,7 @@ export function PatientTrust() {
                   decimals={item.decimals}
                 />
               </p>
-              <p className="mt-3 max-w-[240px] text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:mt-4 sm:text-[13px] sm:tracking-[0.14em]">
+              <p className="patient-trust-label">
                 {item.label}
               </p>
             </article>

@@ -1,0 +1,36 @@
+/* Marquee component styles */
+
+.site-marquee {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid oklch(var(--border));
+  border-bottom: 1px solid oklch(var(--border));
+  background: oklch(var(--background));
+  padding: 1.25rem 0;
+}
+
+.site-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 2.5rem;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: oklch(var(--foreground) / 0.7);
+  animation: marquee 48s linear infinite;
+}
+
+.site-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.site-marquee-separator {
+  color: oklch(var(--forest));
+}
+
+@media (min-width: 768px) {
+  .site-marquee-track {
+    font-size: 1.875rem;
+  }
+}

@@ -4,6 +4,7 @@ import careHands from "@/assets/doctor-working.png";
 import aboutCarousel3 from "@/assets/about-carousel-3.jpeg";
 import aboutCarousel4 from "@/assets/about-carousel-4.png";
 import doctorLogo from "@/assets/logo.png";
+import "./AboutDoctor.css";
 
 const credentials = [
   { year: "Graduação", title: "Medicina", org: "Universidade Federal da Grande Dourados" },
@@ -47,17 +48,17 @@ export function AboutDoctor() {
   }, []);
 
   return (
-    <section id="medico" className="relative -mt-6 pb-4 sm:-mt-10 md:-mt-14">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(122,44,45,0.08),transparent_68%)]" />
-      <div className="mx-auto max-w-[1400px] px-5 py-12 sm:px-6 sm:py-20 md:py-24 lg:px-12">
-        <div className="relative overflow-hidden rounded-[28px] border border-[#e6ddd6] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,251,247,0.98))] px-0 py-0 shadow-[0_30px_80px_rgba(73,24,32,0.08)] backdrop-blur-sm sm:px-8 sm:py-12 md:px-10 md:py-14">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#7a2c2d]/25 to-transparent" />
-          <div className="pointer-events-none absolute -left-10 top-8 h-28 w-28 rounded-full bg-[#d7b183]/15 blur-3xl" />
-          <div className="pointer-events-none absolute right-0 top-0 h-32 w-40 bg-[radial-gradient(circle_at_top_right,rgba(122,44,45,0.08),transparent_70%)]" />
+    <section id="medico" className="about-doctor-section">
+      <div className="about-doctor-top-glow" />
+      <div className="about-doctor-shell">
+        <div className="about-doctor-card">
+          <div className="about-doctor-card-line" />
+          <div className="about-doctor-card-glow about-doctor-card-glow--left" />
+          <div className="about-doctor-card-glow about-doctor-card-glow--right" />
 
-          <div className="grid grid-cols-12 gap-x-8 gap-y-0 sm:gap-y-12">
-            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-5" data-reveal="zoom" style={{ transitionDelay: "120ms" }}>
-              <div className="group relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-none bg-secondary shadow-none sm:max-w-[620px] sm:rounded-[24px] sm:shadow-[0_24px_60px_rgba(73,24,32,0.12)] md:mx-0">
+          <div className="about-doctor-layout">
+            <div className="about-doctor-gallery reveal reveal-delay-1" data-reveal="zoom">
+              <div className="about-doctor-gallery-frame">
                 {galleryImages.map((image, index) => (
                   <img
                     key={image.src}
@@ -66,17 +67,17 @@ export function AboutDoctor() {
                     loading="lazy"
                     width={1080}
                     height={1350}
-                    className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-[1400ms] group-hover:scale-[1.05] ${
-                      activeImage === index ? "opacity-100" : "opacity-0"
+                    className={`about-doctor-gallery-image ${
+                      activeImage === index ? "is-active" : ""
                     }`}
                   />
                 ))}
-                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-black/20 px-3 py-2 backdrop-blur-sm">
+                <div className="about-doctor-gallery-dots">
                   {galleryImages.map((image, index) => (
                     <span
                       key={image.alt}
-                      className={`h-2 w-2 rounded-full transition-colors ${
-                        activeImage === index ? "bg-white" : "bg-white/40"
+                      className={`about-doctor-gallery-dot ${
+                        activeImage === index ? "is-active" : ""
                       }`}
                     />
                   ))}
@@ -84,32 +85,32 @@ export function AboutDoctor() {
               </div>
             </div>
 
-            <div className="reveal col-span-12 min-w-0 md:col-span-6 lg:col-span-7" data-reveal="right" style={{ transitionDelay: "220ms" }}>
-              <div className="mx-auto min-w-0 max-w-[620px] px-5 py-6 sm:px-0 sm:py-0 md:mx-0">
-                <p className="eyebrow text-forest">01 / O médico</p>
-                <h2 className="mt-4 max-w-full text-pretty break-words font-serif text-[clamp(1.85rem,8.8vw,3.5rem)] leading-[0.96] sm:mt-6 sm:max-w-[14ch] sm:text-[34px] md:max-w-[15ch] md:text-[42px] lg:max-w-[12ch] lg:text-[50px] xl:max-w-[13ch] xl:text-[56px]">
-                  <span className="sm:hidden">
-                    Técnica, atenção e acompanhamento de <em className="italic text-forest">pós-operatórios.</em>
+            <div className="about-doctor-copy reveal reveal-delay-2" data-reveal="right">
+              <div className="about-doctor-copy-inner">
+                <p className="eyebrow about-doctor-eyebrow">01 / O médico</p>
+                <h2 className="about-doctor-title">
+                  <span className="about-doctor-title-mobile">
+                    Técnica, atenção e acompanhamento de <em className="about-doctor-title-emphasis">pós-operatórios.</em>
                   </span>
-                  <span className="hidden sm:inline">
+                  <span className="about-doctor-title-desktop">
                     Técnica, atenção e
                     <br />
                     acompanhamento
                     <br />
-                    de <em className="italic text-forest">pós-operatórios.</em>
+                    de <em className="about-doctor-title-emphasis">pós-operatórios.</em>
                   </span>
                 </h2>
 
-                <div className="mt-5 min-w-0 max-w-full sm:mt-8 sm:max-w-[34rem]">
-                  <p className="max-w-full break-words text-[14px] leading-relaxed text-foreground/78 sm:text-[16px]">
+                <div className="about-doctor-text-block">
+                  <p className="about-doctor-body mobile-body-copy">
                     Cada técnica cirúrgica operatória e estratégia terapêutica clínica
                     somam-se no tratamento integral do paciente.
                   </p>
-                  <div className="mt-5 w-full rounded-[18px] bg-[#7a2c2d]/[0.04] px-4 py-4 sm:mt-8 sm:rounded-none sm:bg-transparent sm:px-0 sm:py-0 sm:border-l sm:border-forest/20 sm:pl-5">
-                    <p className="text-[11px] uppercase tracking-[0.16em] text-forest/68 sm:text-[13px] sm:tracking-[0.18em]">
+                  <div className="about-doctor-support-card">
+                    <p className="about-doctor-support-label">
                       Experiência percebida pelo paciente
                     </p>
-                    <p className="mt-2 max-w-full break-words text-[13px] leading-relaxed text-foreground/76 sm:mt-3 sm:max-w-none sm:text-[15px] sm:text-foreground/80">
+                    <p className="about-doctor-support-text mobile-support-copy">
                       Atendimento sem pressa, explicações acessíveis e acompanhamento
                       próximo ajudam a unir tecnologia, precisão e confiança real
                       durante toda a jornada do cuidado.
@@ -121,40 +122,40 @@ export function AboutDoctor() {
           </div>
         </div>
 
-        <div className="reveal relative -mx-4 mt-20 overflow-hidden rounded-none bg-[linear-gradient(180deg,#7a2c2d_0%,#632123_100%)] text-bone shadow-none sm:mx-0 sm:mt-24 sm:rounded-[32px] sm:shadow-[0_34px_90px_rgba(73,24,32,0.18)]">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(217,184,151,0.16),transparent_24%),radial-gradient(circle_at_84%_22%,rgba(255,255,255,0.06),transparent_22%),radial-gradient(circle_at_78%_82%,rgba(217,184,151,0.09),transparent_20%)]" />
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.04),transparent_38%,rgba(255,255,255,0.02)_62%,transparent_100%)]" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/7 to-transparent" />
-          <div className="pointer-events-none absolute -left-16 top-12 h-40 w-40 rounded-full bg-[#d9b897]/10 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-6 right-8 h-32 w-32 rounded-full bg-black/10 blur-3xl" />
+        <div className="about-doctor-credentials reveal">
+          <div className="about-doctor-credentials-overlay" />
+          <div className="about-doctor-credentials-sheen" />
+          <div className="about-doctor-credentials-topline" />
+          <div className="about-doctor-credentials-glow about-doctor-credentials-glow--left" />
+          <div className="about-doctor-credentials-glow about-doctor-credentials-glow--right" />
           <img
             src={doctorLogo}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute right-6 top-6 h-16 w-auto opacity-[0.16] mix-blend-screen sm:h-20 md:right-10 md:top-8"
+            className="about-doctor-credentials-logo"
           />
 
-          <div className="relative px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
-            <div className="max-w-[720px]">
-              <p className="eyebrow text-[#d9b897]">Formação</p>
-              <h3 className="mt-4 max-w-[11ch] font-serif text-[30px] leading-[0.98] sm:max-w-none sm:text-[42px] md:text-[48px]">
+          <div className="about-doctor-credentials-inner">
+            <div className="about-doctor-credentials-header">
+              <p className="eyebrow about-doctor-credentials-eyebrow">Formação</p>
+              <h3 className="about-doctor-credentials-title">
                 Formação sólida e trajetória consistente.
               </h3>
             </div>
 
-            <div className="mt-10 border-t border-white/12">
+            <div className="about-doctor-credentials-list">
               {credentials.map((c) => (
                 <article
                   key={c.title}
-                  className="grid grid-cols-12 gap-3 border-b border-white/12 py-5 transition-colors duration-300 hover:bg-white/[0.03] sm:gap-4 sm:py-6"
+                  className="about-doctor-credential"
                 >
-                  <span className="col-span-12 text-[11px] uppercase tracking-[0.18em] text-[#d9b897] md:col-span-2 md:self-center">
+                  <span className="about-doctor-credential-year">
                     {c.year}
                   </span>
-                  <p className="col-span-12 max-w-[12ch] font-serif text-[25px] leading-[1.02] text-bone md:col-span-5 md:max-w-none md:text-[32px]">
+                  <p className="about-doctor-credential-title">
                     {c.title}
                   </p>
-                  <p className="col-span-12 max-w-[30ch] text-[14px] leading-relaxed text-bone/76 md:col-span-5 md:max-w-none md:text-right">
+                  <p className="about-doctor-credential-org">
                     {c.org}
                   </p>
                 </article>

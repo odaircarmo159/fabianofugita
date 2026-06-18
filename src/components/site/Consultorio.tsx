@@ -4,6 +4,7 @@ import {
   googleMapsConsultorioEmbedUrl,
   googleMapsConsultorioUrl,
 } from "@/content/links";
+import "./Consultorio.css";
 
 const features = [
   "Clínica Serenus para consultas e acompanhamentos",
@@ -21,18 +22,18 @@ const places = [
 
 export function Consultorio() {
   return (
-    <section id="consultorio" className="border-t border-border">
-      <div className="mx-auto max-w-[1400px] px-7 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="reveal col-span-12 min-w-0 md:col-span-7">
-            <div className="aspect-[16/10] overflow-hidden bg-secondary">
+    <section id="consultorio" className="consultorio-section">
+      <div className="consultorio-shell">
+        <div className="consultorio-layout">
+          <div className="consultorio-media reveal">
+            <div className="consultorio-image-frame">
               <img
                 src={clinicRoom}
                 alt="Interior do consultório"
                 loading="lazy"
                 width={1600}
                 height={1000}
-                className="h-full w-full object-cover transition-transform duration-[1400ms] hover:scale-[1.03]"
+                className="consultorio-image"
               />
             </div>
 
@@ -40,20 +41,20 @@ export function Consultorio() {
               href={googleMapsConsultorioUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 block overflow-hidden border border-border bg-card transition-shadow hover:shadow-care sm:mt-8"
+              className="consultorio-map-card"
             >
-              <div className="flex flex-col items-start justify-between gap-3 border-b border-border px-4 py-4 sm:flex-row sm:items-center sm:gap-4 sm:px-5">
-                <div>
-                  <p className="eyebrow text-forest">Clínica Serenus</p>
-                  <p className="mt-2 text-[14px] text-foreground/80">
+              <div className="consultorio-map-card-header">
+                <div className="consultorio-map-card-copy">
+                  <p className="eyebrow consultorio-eyebrow">Clínica Serenus</p>
+                  <p className="consultorio-map-card-label">
                     Ver rota no Google Maps
                   </p>
                 </div>
-                <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] text-forest">
+                <span className="consultorio-map-card-action">
                   Abrir mapa
                   <svg
                     viewBox="0 0 24 24"
-                    className="h-3.5 w-3.5"
+                    className="consultorio-map-card-icon"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"
@@ -63,50 +64,50 @@ export function Consultorio() {
                 </span>
               </div>
 
-              <div className="relative h-[220px] w-full overflow-hidden bg-secondary">
+              <div className="consultorio-map-frame">
                 <iframe
                   title="Mapa da Clínica Serenus"
                   src={googleMapsConsultorioEmbedUrl}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="pointer-events-none h-full w-full border-0 grayscale-[0.1] contrast-[1.02]"
+                  className="consultorio-map-embed"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/10 to-transparent" />
+                <div className="consultorio-map-overlay" />
               </div>
             </a>
           </div>
 
-          <div className="reveal col-span-12 min-w-0 md:col-span-5">
-            <p className="eyebrow text-forest">03 / Locais de atendimento</p>
-            <h2 className="mt-5 max-w-[12ch] break-words text-pretty [overflow-wrap:anywhere] font-serif text-[28px] leading-[1.04] sm:mt-6 sm:max-w-full sm:text-[40px] md:text-[52px]">
-              Um espaço pensado para <em className="italic text-forest">acolhimento e discrição</em>.
+          <div className="consultorio-content reveal">
+            <p className="eyebrow consultorio-eyebrow">03 / Locais de atendimento</p>
+            <h2 className="consultorio-title">
+              Um espaço pensado para <em className="consultorio-title-emphasis">acolhimento e discrição</em>.
             </h2>
-            <p className="mt-5 max-w-full text-[14px] leading-relaxed text-foreground/80 sm:mt-6 sm:max-w-none sm:text-[15px]">
+            <p className="consultorio-body mobile-body-copy">
               O atendimento está concentrado na Clínica Serenus, com ambiente
               voltado para consultas, acompanhamento e orientação individualizada.
             </p>
-            <p className="mt-4 max-w-full text-[13px] leading-relaxed text-muted-foreground sm:max-w-none">
+            <p className="consultorio-support mobile-support-copy">
               A imagem atual segue como apoio visual da seção. Quando houver
               fotos reais dos locais de atendimento, esta parte pode ficar ainda
               mais precisa e confiável.
             </p>
 
-            <ul className="mt-8 divide-y divide-border border-y border-border">
+            <ul className="consultorio-features">
               {features.map((f) => (
-                <li key={f} className="flex items-center gap-4 py-4">
-                  <span className="max-w-full text-[15px] text-foreground/85 sm:max-w-none">{f}</span>
+                <li key={f} className="consultorio-feature">
+                  <span className="consultorio-feature-text mobile-support-copy">{f}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-8 grid grid-cols-1 gap-4 border-t border-border pt-8">
+            <div className="consultorio-places">
               {places.map((place) => (
-                <div key={place.name} className="border border-border bg-card px-5 py-5">
-                  <p className="eyebrow text-muted-foreground">{place.name}</p>
-                  <p className="mt-3 max-w-full text-[14px] leading-relaxed text-foreground/85 sm:max-w-none">
+                <div key={place.name} className="consultorio-place">
+                  <p className="eyebrow consultorio-place-eyebrow">{place.name}</p>
+                  <p className="consultorio-place-description mobile-support-copy">
                     {place.description}
                   </p>
-                  <p className="mt-3 max-w-full text-[14px] leading-relaxed text-foreground sm:max-w-none">
+                  <p className="consultorio-place-details mobile-support-copy">
                     {place.details}
                   </p>
                 </div>

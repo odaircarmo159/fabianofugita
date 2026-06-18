@@ -1,0 +1,219 @@
+/* Consultorio component styles */
+
+.consultorio-section {
+  border-top: 1px solid oklch(var(--border));
+}
+
+.consultorio-shell {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 5rem 1rem;
+}
+
+.consultorio-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.consultorio-image-frame {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: oklch(var(--secondary));
+}
+
+.consultorio-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 1400ms;
+}
+
+.consultorio-image:hover {
+  transform: scale(1.03);
+}
+
+.consultorio-map-card {
+  margin-top: 1.5rem;
+  display: block;
+  overflow: hidden;
+  border: 1px solid oklch(var(--border));
+  background: oklch(var(--card));
+  transition: box-shadow 300ms ease;
+}
+
+.consultorio-map-card:hover {
+  box-shadow: 0 20px 50px rgba(64, 23, 31, 0.12);
+}
+
+.consultorio-map-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid oklch(var(--border));
+  padding: 1rem;
+}
+
+.consultorio-eyebrow {
+  color: oklch(var(--forest));
+}
+
+.consultorio-map-card-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: oklch(var(--foreground) / 0.8);
+}
+
+.consultorio-map-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: oklch(var(--forest));
+}
+
+.consultorio-map-card-icon {
+  height: 0.875rem;
+  width: 0.875rem;
+}
+
+.consultorio-map-frame {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  background: oklch(var(--secondary));
+}
+
+.consultorio-map-embed {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  filter: grayscale(0.1) contrast(1.02);
+}
+
+.consultorio-map-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, oklch(var(--background) / 0.1), transparent);
+}
+
+.consultorio-title {
+  margin-top: 1.25rem;
+  max-width: 100%;
+  font-size: 2.2rem;
+  line-height: 0.98;
+}
+
+.consultorio-title-emphasis {
+  font-style: italic;
+  color: oklch(var(--forest));
+}
+
+.consultorio-body {
+  margin-top: 1.25rem;
+  max-width: 100%;
+  color: oklch(var(--foreground) / 0.8);
+}
+
+.consultorio-support {
+  margin-top: 1rem;
+  max-width: 100%;
+  color: oklch(var(--muted-foreground));
+}
+
+.consultorio-features {
+  margin-top: 2rem;
+  border-top: 1px solid oklch(var(--border));
+  border-bottom: 1px solid oklch(var(--border));
+}
+
+.consultorio-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid oklch(var(--border));
+}
+
+.consultorio-feature:last-child {
+  border-bottom: 0;
+}
+
+.consultorio-feature-text {
+  color: oklch(var(--foreground) / 0.85);
+}
+
+.consultorio-places {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  border-top: 1px solid oklch(var(--border));
+  padding-top: 2rem;
+}
+
+.consultorio-place {
+  border: 1px solid oklch(var(--border));
+  background: oklch(var(--card));
+  padding: 1.25rem;
+}
+
+.consultorio-place-eyebrow {
+  color: oklch(var(--muted-foreground));
+}
+
+.consultorio-place-description {
+  margin-top: 0.75rem;
+  color: oklch(var(--foreground) / 0.85);
+}
+
+.consultorio-place-details {
+  margin-top: 0.75rem;
+  color: oklch(var(--foreground));
+}
+
+@media (min-width: 640px) {
+  .consultorio-shell {
+    padding: 6rem 1.5rem;
+  }
+
+  .consultorio-map-card {
+    margin-top: 2rem;
+  }
+
+  .consultorio-map-card-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .consultorio-title {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .consultorio-layout {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .consultorio-title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consultorio-shell {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}

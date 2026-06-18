@@ -1,0 +1,105 @@
+/* LocalSeo component styles */
+
+.local-seo-section {
+  border-top: 1px solid oklch(var(--border));
+  background: oklch(var(--secondary) / 0.35);
+}
+
+.local-seo-shell {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1400px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  padding: 5rem 1rem;
+}
+
+.local-seo-header-inner,
+.local-seo-content-inner {
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.local-seo-eyebrow,
+.local-seo-title-emphasis {
+  color: oklch(var(--forest));
+}
+
+.local-seo-title {
+  margin-top: 1.25rem;
+  max-width: 100%;
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.local-seo-title-emphasis {
+  font-style: italic;
+}
+
+.local-seo-body {
+  max-width: 100%;
+  color: oklch(var(--foreground) / 0.8);
+}
+
+.local-seo-body--secondary {
+  margin-top: 1.25rem;
+}
+
+.local-seo-cards {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.local-seo-card {
+  border: 1px solid oklch(var(--border));
+  background: oklch(var(--background));
+  padding: 1.25rem;
+  transition: transform 300ms ease;
+}
+
+.local-seo-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.local-seo-card-eyebrow {
+  color: oklch(var(--muted-foreground));
+}
+
+.local-seo-card-text {
+  margin-top: 0.75rem;
+  color: oklch(var(--foreground));
+}
+
+@media (min-width: 640px) {
+  .local-seo-shell {
+    padding: 6rem 1.5rem;
+  }
+
+  .local-seo-title {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .local-seo-shell {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+  }
+
+  .local-seo-header-inner,
+  .local-seo-content-inner {
+    margin-inline: 0;
+  }
+
+  .local-seo-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .local-seo-shell {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}

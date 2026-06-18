@@ -1,0 +1,413 @@
+/* AboutDoctor component styles */
+
+.about-doctor-section {
+  position: relative;
+  margin-top: -1.5rem;
+  padding-bottom: 1rem;
+}
+
+.about-doctor-top-glow {
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 10rem;
+  background: radial-gradient(circle at top, rgba(122, 44, 45, 0.08), transparent 68%);
+}
+
+.about-doctor-shell {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 3rem 1rem;
+}
+
+.about-doctor-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e6ddd6;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 251, 247, 0.98));
+  box-shadow: 0 30px 80px rgba(73, 24, 32, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.about-doctor-card-line,
+.about-doctor-card-glow,
+.about-doctor-credentials-overlay,
+.about-doctor-credentials-sheen,
+.about-doctor-credentials-topline,
+.about-doctor-credentials-glow,
+.about-doctor-credentials-logo {
+  pointer-events: none;
+  position: absolute;
+}
+
+.about-doctor-card-line {
+  inset-inline: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(122, 44, 45, 0.25), transparent);
+}
+
+.about-doctor-card-glow--left {
+  left: -2.5rem;
+  top: 2rem;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 999px;
+  background: rgba(215, 177, 131, 0.15);
+  filter: blur(48px);
+}
+
+.about-doctor-card-glow--right {
+  right: 0;
+  top: 0;
+  height: 8rem;
+  width: 10rem;
+  background: radial-gradient(circle at top right, rgba(122, 44, 45, 0.08), transparent 70%);
+}
+
+.about-doctor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.about-doctor-gallery,
+.about-doctor-copy {
+  min-width: 0;
+}
+
+.about-doctor-gallery-frame {
+  position: relative;
+  margin: 0 auto;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+  background: oklch(var(--secondary));
+}
+
+.about-doctor-gallery-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1400ms ease, transform 1400ms ease;
+}
+
+.about-doctor-gallery-frame:hover .about-doctor-gallery-image {
+  transform: scale(1.05);
+}
+
+.about-doctor-gallery-image.is-active {
+  opacity: 1;
+}
+
+.about-doctor-gallery-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.2);
+  padding: 0.5rem 0.75rem;
+  backdrop-filter: blur(4px);
+}
+
+.about-doctor-gallery-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.4);
+  transition: background-color 300ms ease;
+}
+
+.about-doctor-gallery-dot.is-active {
+  background: white;
+}
+
+.about-doctor-copy-inner {
+  margin: 0 auto;
+  max-width: 620px;
+  min-width: 0;
+  padding: 1.5rem 1rem;
+}
+
+.about-doctor-eyebrow,
+.about-doctor-title-emphasis {
+  color: oklch(var(--forest));
+}
+
+.about-doctor-title {
+  margin-top: 1rem;
+  max-width: 100%;
+  font-size: 2.6rem;
+  line-height: 0.94;
+}
+
+.about-doctor-title-mobile {
+  display: inline;
+}
+
+.about-doctor-title-desktop {
+  display: none;
+}
+
+.about-doctor-title-emphasis {
+  font-style: italic;
+}
+
+.about-doctor-text-block {
+  margin-top: 1.25rem;
+  max-width: 100%;
+}
+
+.about-doctor-body {
+  color: oklch(var(--foreground) / 0.78);
+}
+
+.about-doctor-support-card {
+  margin-top: 1.25rem;
+  width: 100%;
+  border-radius: 18px;
+  background: rgb(122 44 45 / 0.04);
+  padding: 1rem;
+}
+
+.about-doctor-support-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: oklch(var(--forest) / 0.68);
+}
+
+.about-doctor-support-text {
+  margin-top: 0.5rem;
+  color: oklch(var(--foreground) / 0.76);
+}
+
+.about-doctor-credentials {
+  position: relative;
+  margin: 5rem -1rem 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: linear-gradient(180deg, #7a2c2d 0%, #632123 100%);
+  color: oklch(var(--bone));
+}
+
+.about-doctor-credentials-overlay {
+  inset: 0;
+  background: radial-gradient(circle at 16% 18%, rgba(217, 184, 151, 0.16), transparent 24%), radial-gradient(circle at 84% 22%, rgba(255, 255, 255, 0.06), transparent 22%), radial-gradient(circle at 78% 82%, rgba(217, 184, 151, 0.09), transparent 20%);
+}
+
+.about-doctor-credentials-sheen {
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 38%, rgba(255, 255, 255, 0.02) 62%, transparent 100%);
+}
+
+.about-doctor-credentials-topline {
+  inset-inline: 0;
+  top: 0;
+  height: 6rem;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0.07), transparent);
+}
+
+.about-doctor-credentials-glow--left {
+  left: -4rem;
+  top: 3rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 999px;
+  background: rgb(217 184 151 / 0.1);
+  filter: blur(48px);
+}
+
+.about-doctor-credentials-glow--right {
+  right: 2rem;
+  bottom: 1.5rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.1);
+  filter: blur(48px);
+}
+
+.about-doctor-credentials-logo {
+  right: 1.5rem;
+  top: 1.5rem;
+  height: 4rem;
+  width: auto;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+}
+
+.about-doctor-credentials-inner {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+}
+
+.about-doctor-credentials-header {
+  max-width: 720px;
+}
+
+.about-doctor-credentials-eyebrow {
+  color: #d9b897;
+}
+
+.about-doctor-credentials-title {
+  margin-top: 1rem;
+  max-width: 11ch;
+  font-size: 1.875rem;
+  line-height: 0.98;
+}
+
+.about-doctor-credentials-list {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.about-doctor-credential {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.12);
+  padding: 1.25rem 0;
+  transition: background-color 300ms ease;
+}
+
+.about-doctor-credential:hover {
+  background: rgb(255 255 255 / 0.03);
+}
+
+.about-doctor-credential-year {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d9b897;
+}
+
+.about-doctor-credential-title {
+  max-width: 12ch;
+  font-size: 1.5625rem;
+  line-height: 1.02;
+  color: oklch(var(--bone));
+}
+
+.about-doctor-credential-org {
+  max-width: 30ch;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: oklch(var(--bone) / 0.76);
+}
+
+@media (min-width: 640px) {
+  .about-doctor-section {
+    margin-top: -2.5rem;
+  }
+
+  .about-doctor-shell {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-doctor-card {
+    padding: 3rem 2rem;
+  }
+
+  .about-doctor-gallery-frame {
+    max-width: 620px;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(73, 24, 32, 0.12);
+  }
+
+  .about-doctor-copy-inner {
+    padding: 0;
+  }
+
+  .about-doctor-title {
+    margin-top: 1.5rem;
+    max-width: 14ch;
+    font-size: 2.125rem;
+  }
+
+  .about-doctor-title-mobile {
+    display: none;
+  }
+
+  .about-doctor-title-desktop {
+    display: inline;
+  }
+
+  .about-doctor-text-block {
+    margin-top: 2rem;
+    max-width: 34rem;
+  }
+
+  .about-doctor-support-card {
+    margin-top: 2rem;
+    border-left: 1px solid oklch(var(--forest) / 0.2);
+    border-radius: 0;
+    background: transparent;
+    padding: 0 0 0 1.25rem;
+  }
+
+  .about-doctor-support-label {
+    font-size: 0.8125rem;
+    letter-spacing: 0.18em;
+  }
+
+  .about-doctor-support-text {
+    margin-top: 0.75rem;
+    color: oklch(var(--foreground) / 0.8);
+  }
+
+  .about-doctor-credentials {
+    margin: 6rem 0 0;
+    border-radius: 32px;
+    box-shadow: 0 34px 90px rgba(73, 24, 32, 0.18);
+  }
+
+  .about-doctor-credentials-inner {
+    padding: 3rem 2rem;
+  }
+
+  .about-doctor-credentials-title {
+    max-width: none;
+    font-size: 2.625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-doctor-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .about-doctor-title {
+    max-width: 15ch;
+    font-size: 2.625rem;
+  }
+
+  .about-doctor-credential {
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.9fr) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .about-doctor-credential-year {
+    align-self: center;
+  }
+
+  .about-doctor-credential-title {
+    max-width: none;
+    font-size: 2rem;
+  }
+
+  .about-doctor-credential-org {
+    max-width: none;
+    text-align: right;
+  }
+}

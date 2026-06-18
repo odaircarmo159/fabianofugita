@@ -1,0 +1,86 @@
+/* PatientTrust component styles */
+
+.patient-trust-section {
+  border-top: 1px solid oklch(var(--border));
+  background: oklch(var(--background));
+}
+
+.patient-trust-shell {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 4rem 1.25rem;
+}
+
+.patient-trust-grid {
+  margin: 0 auto;
+  display: grid;
+  max-width: 900px;
+  grid-template-columns: minmax(0, 1fr);
+  border: 1px solid oklch(var(--border));
+  background: oklch(var(--card));
+}
+
+.patient-trust-card {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.patient-trust-card + .patient-trust-card {
+  border-top: 1px solid oklch(var(--border));
+}
+
+.patient-trust-value {
+  font-size: 2.375rem;
+  line-height: 1;
+  color: oklch(var(--ink));
+}
+
+.patient-trust-label {
+  margin-top: 0.75rem;
+  max-width: 240px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: oklch(var(--muted-foreground));
+}
+
+@media (min-width: 640px) {
+  .patient-trust-shell {
+    padding: 5rem 1.5rem;
+  }
+
+  .patient-trust-card {
+    min-height: 220px;
+    padding: 2.5rem 2rem;
+  }
+
+  .patient-trust-value {
+    font-size: 2.75rem;
+  }
+
+  .patient-trust-label {
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.14em;
+  }
+}
+
+@media (min-width: 768px) {
+  .patient-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .patient-trust-card + .patient-trust-card {
+    border-top: 0;
+    border-left: 1px solid oklch(var(--border));
+  }
+
+  .patient-trust-value {
+    font-size: 3.5rem;
+  }
+}

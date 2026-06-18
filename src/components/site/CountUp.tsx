@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "./CountUp.css";
 
 type CountUpProps = {
   end: number;
@@ -55,7 +56,7 @@ export function CountUp({
   }, [duration, end]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="count-up">
       {prefix}
       {value.toFixed(decimals)}
       {suffix}

@@ -1,0 +1,228 @@
+/* Footer component styles */
+
+.site-footer {
+  background: oklch(var(--ink));
+  color: oklch(var(--bone));
+}
+
+.site-footer-main {
+  margin: 0 auto;
+  max-width: 1400px;
+  border-top: 1px solid oklch(var(--bone) / 0.25);
+  padding: 2.5rem 1.5rem 7rem;
+}
+
+.site-footer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.site-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer-logo {
+  height: 3rem;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.site-footer-name {
+  font-size: 1.25rem;
+}
+
+.site-footer-credentials,
+.site-footer-legal,
+.site-footer-meta {
+  font-size: 0.75rem;
+}
+
+.site-footer-credentials {
+  margin-top: 0.25rem;
+  color: oklch(var(--bone) / 0.55);
+}
+
+.site-footer-links {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-footer-link,
+.site-footer-link-pill {
+  display: inline-flex;
+  align-items: center;
+  color: oklch(var(--bone) / 0.65);
+  transition: color 300ms ease;
+}
+
+.site-footer-link:hover,
+.site-footer-link-pill:hover,
+.site-footer-legal-button:hover {
+  color: oklch(var(--bone));
+}
+
+.site-footer-link {
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-footer-link-icon-wrap {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid oklch(var(--bone) / 0.25);
+  border-radius: 999px;
+}
+
+.site-footer-link-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.site-footer-link-pill {
+  border: 1px solid oklch(var(--bone) / 0.25);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-footer-legal {
+  max-width: 31ch;
+  color: oklch(var(--bone) / 0.55);
+}
+
+.site-footer-legal-copy {
+  line-height: 1.7;
+}
+
+.site-footer-legal-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.site-footer-legal-button {
+  transition: color 300ms ease;
+}
+
+.site-footer-meta {
+  margin-top: 2rem;
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+  padding-top: 1.25rem;
+  color: oklch(var(--bone) / 0.35);
+}
+
+.site-footer-meta-secondary {
+  margin-top: 0.25rem;
+}
+
+.site-footer-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: oklch(var(--ink) / 0.7);
+  padding: 1.5rem 1rem;
+}
+
+.site-footer-modal {
+  max-height: 85vh;
+  width: 100%;
+  max-width: 42rem;
+  overflow-y: auto;
+  border: 1px solid oklch(var(--border));
+  background: oklch(var(--background));
+  padding: 1.5rem;
+  color: oklch(var(--foreground));
+  box-shadow: 0 25px 60px rgba(15, 15, 15, 0.24);
+}
+
+.site-footer-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-footer-modal-eyebrow {
+  color: oklch(var(--forest));
+}
+
+.site-footer-modal-title {
+  margin-top: 1rem;
+  font-size: 2.125rem;
+  line-height: 1;
+}
+
+.site-footer-modal-close {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: oklch(var(--muted-foreground));
+  transition: color 300ms ease;
+}
+
+.site-footer-modal-close:hover {
+  color: oklch(var(--foreground));
+}
+
+.site-footer-modal-body {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: oklch(var(--foreground) / 0.8);
+}
+
+@media (min-width: 640px) {
+  .site-footer-main {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-footer-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .site-footer-legal {
+    margin-left: auto;
+    max-width: 28rem;
+    text-align: right;
+  }
+
+  .site-footer-legal-actions {
+    justify-content: flex-end;
+  }
+
+  .site-footer-modal {
+    padding: 2rem;
+  }
+
+  .site-footer-modal-title {
+    font-size: 2.625rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer-main {
+    padding-inline: 3rem;
+  }
+}

@@ -1,5 +1,6 @@
 import doctorLogo from "@/assets/logo.png";
 import { googleMapsConsultorioUrl, whatsappAppointmentUrl } from "@/content/links";
+import "./Contato.css";
 
 export function Contato() {
   const channels = [
@@ -24,37 +25,37 @@ export function Contato() {
   ];
 
   return (
-    <section id="contato" className="bg-ink text-bone">
-      <div className="mx-auto max-w-[1400px] px-8 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-12">
-        <div className="grid grid-cols-12 gap-8 border-b hairline-light pb-12 sm:pb-16">
-          <div className="col-span-12 min-w-0 md:col-span-7">
+    <section id="contato" className="contato-section">
+      <div className="contato-shell">
+        <div className="contato-hero">
+          <div className="contato-heading">
             <img
               src={doctorLogo}
               alt="Logo Dr. Fabiano Fugita"
-              className="mb-5 h-12 w-auto object-contain opacity-90 sm:h-14"
+              className="contato-logo"
             />
-            <p className="eyebrow text-bone/60">04 / Contato</p>
-            <h2 className="reveal mt-5 max-w-[12ch] break-words text-pretty font-serif text-[30px] leading-[1.04] sm:mt-6 sm:max-w-full sm:text-[48px] md:text-[80px] lg:text-[96px]">
+            <p className="eyebrow contato-eyebrow">04 / Contato</p>
+            <h2 className="contato-title reveal">
               Agende sua consulta
               <br />
-              <em className="italic text-sage">com tranquilidade e atenção.</em>
+              <em className="contato-title-emphasis">com tranquilidade e atenção.</em>
             </h2>
           </div>
-          <div className="col-span-12 min-w-0 md:col-span-4 md:col-start-9">
-            <p className="max-w-full text-[14px] leading-relaxed text-bone/75 sm:max-w-none sm:text-[15px]">
+          <div className="contato-copy">
+            <p className="contato-body mobile-body-copy">
               A equipe está disponível para orientar sobre horários, primeiras
               informações, local de atendimento e forma de acompanhamento.
               Escolha abaixo o canal que for mais confortável para você.
             </p>
-            <div className="mt-8 border-l border-sage/30 pl-6">
-              <p className="text-[13px] uppercase tracking-[0.18em] text-sage/70">
+            <div className="contato-highlight">
+              <p className="contato-highlight-label">
                 Agendamento facilitado
               </p>
-              <p className="mt-3 max-w-full text-[13px] leading-relaxed text-bone/75 sm:max-w-none sm:text-[14px]">
+              <p className="contato-highlight-text mobile-support-copy">
                 Pelo WhatsApp, a equipe pode orientar sobre horários, Clínica Serenus
                 e primeiras informações antes da consulta.
               </p>
-              <p className="mt-3 max-w-full text-[13px] leading-relaxed text-bone/60 sm:max-w-none">
+              <p className="contato-highlight-note mobile-support-copy">
                 Contatos adicionais informados no material do consultório:
                 {" "}
                 (67) 99116-1092.
@@ -64,36 +65,34 @@ export function Contato() {
               href={whatsappAppointmentUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex w-full items-center justify-center gap-3 bg-bone px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.16em] text-ink transition-colors hover:bg-sage sm:w-auto sm:px-7 sm:py-4 sm:text-[13px] sm:tracking-[0.18em]"
+              className="contato-primary-action"
             >
               Marcar agora
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+              <svg className="contato-primary-action-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
             </a>
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-12 gap-px bg-bone/10">
+        <div className="contato-channels">
           {channels.map((c) => (
             <a
               key={c.label}
               href={c.href}
               target={c.label !== "E-mail" ? "_blank" : undefined}
               rel={c.label !== "E-mail" ? "noreferrer" : undefined}
-              className="group col-span-12 min-w-0 bg-ink p-6 transition-colors hover:bg-forest sm:p-8 md:col-span-4"
+              className={`contato-channel contato-channel--${c.label.toLowerCase().replace(/\s+/g, "-")}`}
             >
-              <p className="eyebrow text-bone/55">{c.label}</p>
+              <p className="eyebrow contato-channel-eyebrow">{c.label}</p>
               <p
-                className={`mt-5 font-serif leading-tight text-bone sm:mt-6 ${
-                  c.label === "E-mail"
-                    ? "max-w-full break-all text-[16px] sm:max-w-none sm:text-[20px] md:text-[22px]"
-                    : "max-w-full break-words text-[18px] sm:max-w-none sm:text-[22px] md:text-[24px]"
+                className={`contato-channel-value ${
+                  c.label === "E-mail" ? "contato-channel-value--email" : ""
                 }`}
               >
                 {c.value}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-sage sm:mt-8 sm:text-[12px] sm:tracking-[0.2em]">
+              <span className="contato-channel-cta">
                 {c.cta}
-                <svg className="h-3 w-3 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+                <svg className="contato-channel-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
               </span>
             </a>
           ))}

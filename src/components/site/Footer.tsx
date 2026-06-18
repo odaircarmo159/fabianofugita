@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import doctorLogo from "@/assets/logo.png";
 import { cfmSearchUrl, instagramProfileUrl, lattesProfileUrl } from "@/content/links";
+import "./Footer.css";
 
 type ModalType = "privacy" | "terms" | null;
 
@@ -25,32 +26,32 @@ export function Footer() {
 
   return (
     <>
-      <footer className="bg-ink text-bone">
-        <div className="mx-auto max-w-[1400px] border-t hairline-light px-6 pb-28 pt-10 sm:pb-10 lg:px-12">
-          <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-6">
-            <div className="flex items-center gap-4">
+      <footer className="site-footer">
+        <div className="site-footer-main">
+          <div className="site-footer-layout">
+            <div className="site-footer-brand-block">
+            <div className="site-footer-brand">
               <img
                 src={doctorLogo}
                 alt="Logo Dr. Fabiano Fugita"
-                className="h-12 w-auto object-contain opacity-95"
+                className="site-footer-logo"
               />
-              <p className="font-serif text-xl">Dr. Fabiano Fugita</p>
+              <p className="site-footer-name">Dr. Fabiano Fugita</p>
             </div>
-            <p className="mt-1 text-[12px] text-bone/55">
+            <p className="site-footer-credentials">
               CRM 9145 RQE 8667 · Urologia &amp; Uro-Oncologia · © {new Date().getFullYear()}
             </p>
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="site-footer-links">
               <a
                 href={instagramProfileUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-bone/65 transition-colors hover:text-bone"
+                className="site-footer-link site-footer-link--instagram"
               >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border hairline-light">
+                <span className="site-footer-link-icon-wrap">
                   <svg
                     viewBox="0 0 24 24"
-                    className="h-4 w-4"
+                    className="site-footer-link-icon"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"
@@ -68,7 +69,7 @@ export function Footer() {
                 href={cfmSearchUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full border hairline-light px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-bone/65 transition-colors hover:text-bone"
+                className="site-footer-link-pill"
               >
                 CRM 9145
               </a>
@@ -76,7 +77,7 @@ export function Footer() {
                 href={cfmSearchUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full border hairline-light px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-bone/65 transition-colors hover:text-bone"
+                className="site-footer-link-pill"
               >
                 RQE 8667
               </a>
@@ -84,29 +85,29 @@ export function Footer() {
                 href={lattesProfileUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full border hairline-light px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-bone/65 transition-colors hover:text-bone"
+                className="site-footer-link-pill"
               >
                 Currículo Lattes
               </a>
             </div>
             </div>
-            <div className="col-span-12 max-w-[31ch] text-[12px] text-bone/55 md:col-span-6 md:ml-auto md:max-w-md md:text-right">
-              <p className="leading-relaxed">
+            <div className="site-footer-legal">
+              <p className="site-footer-legal-copy">
                 Este site tem finalidade informativa. A avaliação médica individual é essencial para
                 diagnóstico e definição do tratamento mais adequado.
               </p>
-              <div className="mt-5 flex flex-wrap justify-start gap-4 md:justify-end">
+              <div className="site-footer-legal-actions">
                 <button
                   type="button"
                   onClick={() => setActiveModal("privacy")}
-                  className="transition-colors hover:text-bone"
+                  className="site-footer-legal-button"
                 >
                   Política de Privacidade
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveModal("terms")}
-                  className="transition-colors hover:text-bone"
+                  className="site-footer-legal-button"
                 >
                   Termos de Uso
                 </button>
@@ -114,33 +115,33 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-white/8 pt-5 text-[11px] text-bone/35">
+          <div className="site-footer-meta">
             <p>© {new Date().getFullYear()} Dr. Fabiano Fugita. Todos os direitos reservados.</p>
-            <p className="mt-1">Desenvolvido por YouSystem.</p>
+            <p className="site-footer-meta-secondary">Desenvolvido por YouSystem.</p>
           </div>
         </div>
       </footer>
 
       {activeModal && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/70 px-4 py-6"
+          className="site-footer-modal-backdrop"
           onClick={() => setActiveModal(null)}
         >
           <div
             role="dialog"
             aria-modal="true"
             aria-labelledby={activeModal === "privacy" ? "privacy-modal-title" : "terms-modal-title"}
-            className="max-h-[85vh] w-full max-w-2xl overflow-y-auto border border-border bg-background p-6 text-foreground shadow-2xl md:p-8"
+            className="site-footer-modal"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-6">
+            <div className="site-footer-modal-header">
               <div>
-                <p className="eyebrow text-forest">
+                <p className="eyebrow site-footer-modal-eyebrow">
                   {activeModal === "privacy" ? "Privacidade" : "Termos de uso"}
                 </p>
                 <h2
                   id={activeModal === "privacy" ? "privacy-modal-title" : "terms-modal-title"}
-                  className="mt-4 font-serif text-[34px] leading-none md:text-[42px]"
+                  className="site-footer-modal-title"
                 >
                   {activeModal === "privacy" ? "Política de Privacidade" : "Termos de Uso"}
                 </h2>
@@ -148,14 +149,14 @@ export function Footer() {
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
-                className="text-[12px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+                className="site-footer-modal-close"
               >
                 Fechar
               </button>
             </div>
 
             {activeModal === "privacy" ? (
-              <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
+              <div className="site-footer-modal-body">
                 <p>
                   Esta Política de Privacidade explica de forma simples como os dados enviados por
                   pacientes e visitantes podem ser utilizados neste site.
@@ -180,7 +181,7 @@ export function Footer() {
                 </p>
               </div>
             ) : (
-              <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-foreground/80">
+              <div className="site-footer-modal-body">
                 <p>
                   Este site tem caráter institucional e informativo, com o objetivo de apresentar
                   a atuação médica, formas de contato e informações gerais sobre o atendimento.

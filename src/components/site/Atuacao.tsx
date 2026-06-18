@@ -11,6 +11,7 @@ import patologiaSexualIcon from "@/assets/patologia-sexual.png";
 import segundaOpiniaoIcon from "@/assets/segunda-opiniao.png";
 import tumoresUrologicosIcon from "@/assets/tumores-urologicos.png";
 import { siteContent } from "@/content/site";
+import "./Atuacao.css";
 
 const iconMap = {
   "Consulta urológica": consultaIcon,
@@ -34,43 +35,36 @@ const areas = siteContent.specialties.areas.map((area, index) => ({
 
 export function Atuacao() {
   return (
-    <section
-      id="especialidades"
-      className="bg-[linear-gradient(180deg,#fbf6f2_0%,#f7efe7_100%)]"
-    >
-      <div className="mx-auto max-w-[1680px] px-7 py-20 sm:px-6 sm:py-24 md:py-28 lg:px-12">
-        <div className="mx-auto max-w-[860px] text-center">
-          <p className="eyebrow text-[#8f6a58]">02 / Áreas de Atuação</p>
-          <h2 className="reveal mx-auto mt-5 max-w-[10ch] text-pretty font-serif text-[36px] italic leading-[0.95] text-forest sm:max-w-none sm:text-[56px] md:text-[78px] lg:text-[92px]">
+    <section id="especialidades" className="atuacao-section">
+      <div className="atuacao-shell">
+        <div className="atuacao-header">
+          <p className="eyebrow atuacao-eyebrow">02 / Áreas de Atuação</p>
+          <h2 className="atuacao-title reveal">
             Áreas de Atuação
           </h2>
-          <p className="reveal mx-auto mt-6 max-w-full text-[16px] leading-relaxed text-foreground/78 sm:max-w-[760px] sm:text-[19px]">
-            Principais áreas de atendimento com leitura rápida e abordagem objetiva.
-          </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="atuacao-grid">
           {areas.map((a) => (
             <article
               key={a.title}
-              className="reveal group relative flex min-h-[250px] flex-col overflow-hidden border border-[#ead9cc] bg-[#fffaf6] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#caa98f] hover:shadow-[0_28px_60px_-42px_rgba(98,35,38,0.24)] sm:min-h-[270px] sm:p-7"
-              style={{ borderRadius: "24px" }}
+              className="atuacao-card reveal"
             >
-              <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#b88462_0%,#8f3b37_100%)] opacity-80" />
-              <div className="flex items-start justify-between">
+              <div className="atuacao-card-topline" />
+              <div className="atuacao-card-header">
                 <img
                   src={iconMap[a.title as keyof typeof iconMap]}
                   alt=""
                   aria-hidden="true"
-                  className="h-12 w-12 object-contain opacity-95 sm:h-14 sm:w-14"
+                  className="atuacao-card-icon"
                 />
-                <span className="font-serif text-[16px] italic text-[#c5ab96]">{a.n}</span>
+                <span className="atuacao-card-number">{a.n}</span>
               </div>
 
-              <h3 className="mt-6 max-w-[15ch] text-pretty font-sans text-[20px] font-semibold leading-[1.08] text-forest sm:text-[24px]">
+              <h3 className="atuacao-card-title">
                 {a.title}
               </h3>
-              <p className="mt-3 max-w-[30ch] text-[14px] leading-[1.5] text-foreground/76 sm:text-[15px]">
+              <p className="atuacao-card-description">
                 {a.desc}
               </p>
             </article>
